@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF056F4A1960AA6F000986E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F491960AA6E000986E0 /* Foundation.framework */; };
+		FF056F4C1960AA6F000986E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F4B1960AA6F000986E0 /* CoreGraphics.framework */; };
+		FF056F4E1960AA6F000986E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F4D1960AA6F000986E0 /* UIKit.framework */; };
+		FF056F541960AA6F000986E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF056F521960AA6F000986E0 /* InfoPlist.strings */; };
+		FF056F561960AA6F000986E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F551960AA6F000986E0 /* main.m */; };
+		FF056F5A1960AA6F000986E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F591960AA6F000986E0 /* AppDelegate.m */; };
+		FF056F5D1960AA6F000986E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF056F5B1960AA6F000986E0 /* Main.storyboard */; };
+		FF056F601960AA6F000986E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F5F1960AA6F000986E0 /* ViewController.m */; };
+		FF056F621960AA6F000986E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF056F611960AA6F000986E0 /* Images.xcassets */; };
+		FF056F691960AA6F000986E0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F681960AA6F000986E0 /* XCTest.framework */; };
+		FF056F6A1960AA6F000986E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F491960AA6E000986E0 /* Foundation.framework */; };
+		FF056F6B1960AA6F000986E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F4D1960AA6F000986E0 /* UIKit.framework */; };
+		FF056F731960AA6F000986E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF056F711960AA6F000986E0 /* InfoPlist.strings */; };
+		FF056F751960AA6F000986E0 /* LiveBetTipsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F741960AA6F000986E0 /* LiveBetTipsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF056F6C1960AA6F000986E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF056F3E1960AA6E000986E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF056F451960AA6E000986E0;
+			remoteInfo = LiveBetTips;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF056F461960AA6E000986E0 /* LiveBetTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveBetTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF056F491960AA6E000986E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF056F4B1960AA6F000986E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FF056F4D1960AA6F000986E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FF056F511960AA6F000986E0 /* LiveBetTips-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiveBetTips-Info.plist"; sourceTree = "<group>"; };
+		FF056F531960AA6F000986E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF056F551960AA6F000986E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FF056F571960AA6F000986E0 /* LiveBetTips-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LiveBetTips-Prefix.pch"; sourceTree = "<group>"; };
+		FF056F581960AA6F000986E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FF056F591960AA6F000986E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FF056F5C1960AA6F000986E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF056F5E1960AA6F000986E0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FF056F5F1960AA6F000986E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FF056F611960AA6F000986E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF056F671960AA6F000986E0 /* LiveBetTipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveBetTipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF056F681960AA6F000986E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FF056F701960AA6F000986E0 /* LiveBetTipsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiveBetTipsTests-Info.plist"; sourceTree = "<group>"; };
+		FF056F721960AA6F000986E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF056F741960AA6F000986E0 /* LiveBetTipsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBetTipsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF056F431960AA6E000986E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF056F4C1960AA6F000986E0 /* CoreGraphics.framework in Frameworks */,
+				FF056F4E1960AA6F000986E0 /* UIKit.framework in Frameworks */,
+				FF056F4A1960AA6F000986E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF056F641960AA6F000986E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF056F691960AA6F000986E0 /* XCTest.framework in Frameworks */,
+				FF056F6B1960AA6F000986E0 /* UIKit.framework in Frameworks */,
+				FF056F6A1960AA6F000986E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF056F3D1960AA6E000986E0 = {
+			isa = PBXGroup;
+			children = (
+				FF056F4F1960AA6F000986E0 /* LiveBetTips */,
+				FF056F6E1960AA6F000986E0 /* LiveBetTipsTests */,
+				FF056F481960AA6E000986E0 /* Frameworks */,
+				FF056F471960AA6E000986E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF056F471960AA6E000986E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF056F461960AA6E000986E0 /* LiveBetTips.app */,
+				FF056F671960AA6F000986E0 /* LiveBetTipsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF056F481960AA6E000986E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF056F491960AA6E000986E0 /* Foundation.framework */,
+				FF056F4B1960AA6F000986E0 /* CoreGraphics.framework */,
+				FF056F4D1960AA6F000986E0 /* UIKit.framework */,
+				FF056F681960AA6F000986E0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF056F4F1960AA6F000986E0 /* LiveBetTips */ = {
+			isa = PBXGroup;
+			children = (
+				FF056F581960AA6F000986E0 /* AppDelegate.h */,
+				FF056F591960AA6F000986E0 /* AppDelegate.m */,
+				FF056F5B1960AA6F000986E0 /* Main.storyboard */,
+				FF056F5E1960AA6F000986E0 /* ViewController.h */,
+				FF056F5F1960AA6F000986E0 /* ViewController.m */,
+				FF056F611960AA6F000986E0 /* Images.xcassets */,
+				FF056F501960AA6F000986E0 /* Supporting Files */,
+			);
+			path = LiveBetTips;
+			sourceTree = "<group>";
+		};
+		FF056F501960AA6F000986E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF056F511960AA6F000986E0 /* LiveBetTips-Info.plist */,
+				FF056F521960AA6F000986E0 /* InfoPlist.strings */,
+				FF056F551960AA6F000986E0 /* main.m */,
+				FF056F571960AA6F000986E0 /* LiveBetTips-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF056F6E1960AA6F000986E0 /* LiveBetTipsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF056F741960AA6F000986E0 /* LiveBetTipsTests.m */,
+				FF056F6F1960AA6F000986E0 /* Supporting Files */,
+			);
+			path = LiveBetTipsTests;
+			sourceTree = "<group>";
+		};
+		FF056F6F1960AA6F000986E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF056F701960AA6F000986E0 /* LiveBetTipsTests-Info.plist */,
+				FF056F711960AA6F000986E0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF056F451960AA6E000986E0 /* LiveBetTips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF056F781960AA6F000986E0 /* Build configuration list for PBXNativeTarget "LiveBetTips" */;
+			buildPhases = (
+				FF056F421960AA6E000986E0 /* Sources */,
+				FF056F431960AA6E000986E0 /* Frameworks */,
+				FF056F441960AA6E000986E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveBetTips;
+			productName = LiveBetTips;
+			productReference = FF056F461960AA6E000986E0 /* LiveBetTips.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF056F661960AA6F000986E0 /* LiveBetTipsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF056F7B1960AA6F000986E0 /* Build configuration list for PBXNativeTarget "LiveBetTipsTests" */;
+			buildPhases = (
+				FF056F631960AA6F000986E0 /* Sources */,
+				FF056F641960AA6F000986E0 /* Frameworks */,
+				FF056F651960AA6F000986E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF056F6D1960AA6F000986E0 /* PBXTargetDependency */,
+			);
+			name = LiveBetTipsTests;
+			productName = LiveBetTipsTests;
+			productReference = FF056F671960AA6F000986E0 /* LiveBetTipsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF056F3E1960AA6E000986E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ishan Khanna";
+				TargetAttributes = {
+					FF056F661960AA6F000986E0 = {
+						TestTargetID = FF056F451960AA6E000986E0;
+					};
+				};
+			};
+			buildConfigurationList = FF056F411960AA6E000986E0 /* Build configuration list for PBXProject "LiveBetTips" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF056F3D1960AA6E000986E0;
+			productRefGroup = FF056F471960AA6E000986E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF056F451960AA6E000986E0 /* LiveBetTips */,
+				FF056F661960AA6F000986E0 /* LiveBetTipsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF056F441960AA6E000986E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF056F621960AA6F000986E0 /* Images.xcassets in Resources */,
+				FF056F541960AA6F000986E0 /* InfoPlist.strings in Resources */,
+				FF056F5D1960AA6F000986E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF056F651960AA6F000986E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF056F731960AA6F000986E0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF056F421960AA6E000986E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF056F601960AA6F000986E0 /* ViewController.m in Sources */,
+				FF056F5A1960AA6F000986E0 /* AppDelegate.m in Sources */,
+				FF056F561960AA6F000986E0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF056F631960AA6F000986E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF056F751960AA6F000986E0 /* LiveBetTipsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF056F6D1960AA6F000986E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF056F451960AA6E000986E0 /* LiveBetTips */;
+			targetProxy = FF056F6C1960AA6F000986E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF056F521960AA6F000986E0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF056F531960AA6F000986E0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FF056F5B1960AA6F000986E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF056F5C1960AA6F000986E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF056F711960AA6F000986E0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF056F721960AA6F000986E0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF056F761960AA6F000986E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FF056F771960AA6F000986E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF056F791960AA6F000986E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiveBetTips/LiveBetTips-Prefix.pch";
+				INFOPLIST_FILE = "LiveBetTips/LiveBetTips-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FF056F7A1960AA6F000986E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiveBetTips/LiveBetTips-Prefix.pch";
+				INFOPLIST_FILE = "LiveBetTips/LiveBetTips-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FF056F7C1960AA6F000986E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LiveBetTips.app/LiveBetTips";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiveBetTips/LiveBetTips-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LiveBetTipsTests/LiveBetTipsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FF056F7D1960AA6F000986E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LiveBetTips.app/LiveBetTips";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiveBetTips/LiveBetTips-Prefix.pch";
+				INFOPLIST_FILE = "LiveBetTipsTests/LiveBetTipsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF056F411960AA6E000986E0 /* Build configuration list for PBXProject "LiveBetTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF056F761960AA6F000986E0 /* Debug */,
+				FF056F771960AA6F000986E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF056F781960AA6F000986E0 /* Build configuration list for PBXNativeTarget "LiveBetTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF056F791960AA6F000986E0 /* Debug */,
+				FF056F7A1960AA6F000986E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FF056F7B1960AA6F000986E0 /* Build configuration list for PBXNativeTarget "LiveBetTipsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF056F7C1960AA6F000986E0 /* Debug */,
+				FF056F7D1960AA6F000986E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF056F3E1960AA6E000986E0 /* Project object */;
+}
