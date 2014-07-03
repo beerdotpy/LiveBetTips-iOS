@@ -21,6 +21,8 @@
 		FF056F6B1960AA6F000986E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F4D1960AA6F000986E0 /* UIKit.framework */; };
 		FF056F731960AA6F000986E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF056F711960AA6F000986E0 /* InfoPlist.strings */; };
 		FF056F751960AA6F000986E0 /* LiveBetTipsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F741960AA6F000986E0 /* LiveBetTipsTests.m */; };
+		FF52B4461965EDE000BDD10B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF52B4451965EDE000BDD10B /* SignupViewController.m */; };
+		FF52B4491965EE2700BDD10B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF52B4481965EE2700BDD10B /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		FF056F701960AA6F000986E0 /* LiveBetTipsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiveBetTipsTests-Info.plist"; sourceTree = "<group>"; };
 		FF056F721960AA6F000986E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF056F741960AA6F000986E0 /* LiveBetTipsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBetTipsTests.m; sourceTree = "<group>"; };
+		FF52B4441965EDE000BDD10B /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		FF52B4451965EDE000BDD10B /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		FF52B4471965EE2700BDD10B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		FF52B4481965EE2700BDD10B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				FF056F5F1960AA6F000986E0 /* ViewController.m */,
 				FF056F611960AA6F000986E0 /* Images.xcassets */,
 				FF056F501960AA6F000986E0 /* Supporting Files */,
+				FF52B4441965EDE000BDD10B /* SignupViewController.h */,
+				FF52B4451965EDE000BDD10B /* SignupViewController.m */,
+				FF52B4471965EE2700BDD10B /* LoginViewController.h */,
+				FF52B4481965EE2700BDD10B /* LoginViewController.m */,
 			);
 			path = LiveBetTips;
 			sourceTree = "<group>";
@@ -251,7 +261,9 @@
 			files = (
 				FF056F601960AA6F000986E0 /* ViewController.m in Sources */,
 				FF056F5A1960AA6F000986E0 /* AppDelegate.m in Sources */,
+				FF52B4461965EDE000BDD10B /* SignupViewController.m in Sources */,
 				FF056F561960AA6F000986E0 /* main.m in Sources */,
+				FF52B4491965EE2700BDD10B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +391,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LiveBetTips/LiveBetTips-Prefix.pch";
 				INFOPLIST_FILE = "LiveBetTips/LiveBetTips-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,6 +405,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LiveBetTips/LiveBetTips-Prefix.pch";
 				INFOPLIST_FILE = "LiveBetTips/LiveBetTips-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +470,7 @@
 				FF056F7A1960AA6F000986E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF056F7B1960AA6F000986E0 /* Build configuration list for PBXNativeTarget "LiveBetTipsTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +479,7 @@
 				FF056F7D1960AA6F000986E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
