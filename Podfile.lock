@@ -17,17 +17,20 @@ PODS:
   - RestKit/Support (0.20.3):
     - TransitionKit (= 1.1.1)
   - SOCKit (1.1)
+  - Toast (2.2)
   - TransitionKit (1.1.1)
 
 DEPENDENCIES:
   - MBProgressHUD (~> 0.8)
   - RestKit (~> 0.20.3)
+  - Toast (~> 2.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 80c4e0652b08eb34e25b9c0ff3c82556fe5967b4
   MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
   RestKit: 7f9490e709ee745e166c4d2aa7a8d132831275b0
   SOCKit: d8d0dd3688ae1026c12367570da8fa8e1a6980fb
+  Toast: dcf6e9f10369291f9c22feae1bed93c9ed3d84a2
   TransitionKit: b573f93c422f6aedf7d40e93e7c2f202d1295063
 
 COCOAPODS: 0.33.1

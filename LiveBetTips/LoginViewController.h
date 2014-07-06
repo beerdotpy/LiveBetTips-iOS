@@ -11,5 +11,7 @@
 @interface LoginViewController : UIViewController
 
 @property NSArray *users;
+@property (strong, nonatomic) IBOutlet UITextField *tf_email;
+@property (strong, nonatomic) IBOutlet UITextField *tf_password;
 
 @end

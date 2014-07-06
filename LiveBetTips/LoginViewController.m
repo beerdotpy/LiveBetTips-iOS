@@ -70,6 +70,7 @@
     [self performSegueWithIdentifier:@"loginToSignUpSegue" sender:sender];
 }
 
+
 - (IBAction)loginButtonClicked:(id)sender {
     
     //Start Displaying Progress Dialog
@@ -108,12 +109,33 @@
 - (void) loginUser
 {
     
-    NSDictionary *loginRequestData = @{@"email":@"sarthakmeh03@gmail.com",
-                                       @"password":@"sarthak",
-                                       };
+    NSString *email = self.tf_email.text;
+    NSString *password = self.tf_password.text;
+    NSDictionary *loginRequestData;
+    
+    NSLog(@"Email = %@ & Password = %@", email, password);
+    if (![email length]>0) {
+        //Check if EMail Field is Blank
+        //Show Alert Dialog
+        UIAlertView *uiAlertView = [[UIAlertView alloc] initWithTitle:@"Bummer !" message:@"Email Cannot be blank" delegate:nil cancelButtonTitle:@"Got it!" otherButtonTitles:nil, nil];
+        [uiAlertView show];
+    } else if (![password length] > 0) {
+        //Check if Password Field is Blank
+        //Show Alert Dialog
+        UIAlertView *uiAlertView = [[UIAlertView alloc] initWithTitle:@"Bummer !" message:@"Password Cannot be blank" delegate:nil cancelButtonTitle:@"Got it!" otherButtonTitles:nil, nil];
+        [uiAlertView show];
+        
+    } else {
+        //Construct Dictionary Here
+        loginRequestData = @{@"email":email,
+                             @"password":password,};
+    }
+    
+    //Convert Dictionary into JSON String
     NSString *jsonRequestData = [loginRequestData bv_jsonStringWithPrettyPrint:true];
     NSLog(@"Json Data = %@", jsonRequestData);
     
+    //Setting Content-Type: application/json Header, else the api throws 404 NOT Found Error
     [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:@"Content-Type" value:@"application/json"];
     
     NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
@@ -133,9 +155,5 @@
      ];
     
 }
-
-
-
-
 
 @end
