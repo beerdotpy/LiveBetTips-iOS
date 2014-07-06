@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
 @implementation AppDelegate
+
+NSString *const DOMAIN_NAME = @"http://178.21.172.107/";
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "User.h"
 @interface LoginViewController : UIViewController
+
+@property NSArray *users;
 
 @end
