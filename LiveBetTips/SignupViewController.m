@@ -35,6 +35,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)signUpButtonClicked:(id)sender {
+    
+    if (![self.emailTextField.text length] > 0) {
+        
+    } else if (![self.passwordTextField.text length] > 0) {
+    
+    } else if (![self.confirmPasswordTextField.text length] > 0) {
+        
+    } else {
+        
+    }
+}
+
+
 /*
 #pragma mark - Navigation
 

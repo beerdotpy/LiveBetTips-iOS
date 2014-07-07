@@ -10,8 +10,6 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-extern NSString *const DOMAIN_NAME;
-
 @property (strong, nonatomic) UIWindow *window;
 
 @end

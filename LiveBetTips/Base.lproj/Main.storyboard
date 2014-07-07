@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7h-yV-4uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="0.0"/>
+            <point key="canvasLocation" x="-376" y="2"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="ufC-wZ-h7g">
@@ -77,6 +77,9 @@
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPasswordClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WpZ-BI-sTE"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-VB-Bjr">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -93,11 +96,33 @@
                         <outlet property="tf_email" destination="VPX-Uc-U0v" id="fZN-VF-Hwo"/>
                         <outlet property="tf_password" destination="NKa-SS-8s4" id="cG8-wp-zqc"/>
                         <segue destination="3by-X7-v6Z" kind="push" identifier="loginToSignUpSegue" id="Snc-nj-Ubj"/>
+                        <segue destination="tod-OK-jcc" kind="push" identifier="loginToTipsSegue" id="Ni5-DO-GE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="177" y="0.0"/>
+            <point key="canvasLocation" x="201" y="-18"/>
+        </scene>
+        <!--View Controller - TipsViewController-->
+        <scene sceneID="31Q-Xm-IMw">
+            <objects>
+                <viewController title="TipsViewController" id="tod-OK-jcc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c0e-L0-bMC"/>
+                        <viewControllerLayoutGuide type="bottom" id="gI8-L2-ODI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EfN-hD-U9G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TIps" id="6bY-yM-SYE">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="9jZ-2L-M9f"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqo-Em-iMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="-237"/>
         </scene>
         <!--Signup View Controller - Register-->
         <scene sceneID="Fpx-qR-as1">
@@ -152,6 +177,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonClicked:" destination="3by-X7-v6Z" eventType="touchUpInside" id="at3-Yc-RdL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPF-bH-d73">
                                 <rect key="frame" x="20" y="232" width="142" height="21"/>
@@ -169,10 +197,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="UTu-Pf-1T0"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="q5J-Pa-dTM" id="uTm-zl-oTQ"/>
+                        <outlet property="emailTextField" destination="294-lG-oxU" id="Ldp-0V-l5f"/>
+                        <outlet property="passwordTextField" destination="2G8-Fp-X4G" id="X1v-5i-oI4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT4-f0-wkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="0.0"/>
+            <point key="canvasLocation" x="827" y="429"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -10,6 +10,7 @@
 #import <RestKit/RestKit.h>
 #import "AppDelegate.h"
 #import "User.h"
+#import <Toast+UIView.h>
 
 @interface LoginViewController ()
 
@@ -83,21 +84,21 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
     
     [indicator startAnimating];
-    [self loginUser];
+    [self loginUser:sender];
     [indicator stopAnimating];
 }
 
 - (void) configureRestKit
 {
     
-    NSURL *baseURL = [NSURL URLWithString:DOMAIN_NAME];
+    NSURL *baseURL = [NSURL URLWithString:BASE_URL];
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     //initialize RestKit
     RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
     
     //setup object mappings
     RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[User class]];
-    [userMapping addAttributeMappingsFromArray:@[@"id",@"username", @"authToken"]];
+    [userMapping addAttributeMappingsFromArray:@[KEY_USER_ID,KEY_USER_NAME, KEY_USER_AUTH_TOKEN]];
     
     RKResponseDescriptor *loginResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping method:RKRequestMethodPOST pathPattern:@"api/user/login/" keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
@@ -106,7 +107,7 @@
     
 }
 
-- (void) loginUser
+- (void) loginUser:(id)sender
 {
     
     NSString *email = self.tf_email.text;
@@ -117,7 +118,11 @@
     if (![email length]>0) {
         //Check if EMail Field is Blank
         //Show Alert Dialog
-        UIAlertView *uiAlertView = [[UIAlertView alloc] initWithTitle:@"Bummer !" message:@"Email Cannot be blank" delegate:nil cancelButtonTitle:@"Got it!" otherButtonTitles:nil, nil];
+        UIAlertView *uiAlertView = [[UIAlertView alloc] initWithTitle:@"Bummer !"
+                                                        message:@"Email Cannot be blank"
+                                                        delegate:nil
+                                                        cancelButtonTitle:@"Got it!"
+                                                        otherButtonTitles:nil, nil];
         [uiAlertView show];
     } else if (![password length] > 0) {
         //Check if Password Field is Blank
@@ -127,33 +132,67 @@
         
     } else {
         //Construct Dictionary Here
-        loginRequestData = @{@"email":email,
-                             @"password":password,};
+        loginRequestData = @{KEY_EMAIL:email,
+                             KEY_PASSWORD:password,};
+        
+        //Convert Dictionary into JSON String
+        NSString *jsonRequestData = [loginRequestData bv_jsonStringWithPrettyPrint:true];
+        NSLog(@"Json Data = %@", jsonRequestData);
+        
+        //Setting Content-Type: application/json Header, else the api throws 404 NOT Found Error
+        [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_CONTENT_TYPE value:RKMIMETypeJSON];
+        
+        NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
+        
+        [[RKObjectManager sharedManager] postObject:jsonRequestData path:@"api/user/login/"
+                                         parameters: loginRequestData
+                                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                
+                                                _users = mappingResult.array ;
+                                                User *loggedInUser = [_users objectAtIndex:0];
+                                                NSLog(@"id = %@, username = %@, authToken = %@", loggedInUser.id,
+                                                      loggedInUser.username, loggedInUser.authToken );
+                                                [self preserveUser:loggedInUser];
+                                                [self notifyUserWithLogin:@"Logged In Successfully"];
+                                                [self performSegueWithIdentifier:@"loginToTipsSegue" sender:sender];
+                                                
+                                            }
+                                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                [self notifyUserWithLogin:@"Email/Password Invalid, Please Try Again"];
+                                            }
+         ];
     }
     
-    //Convert Dictionary into JSON String
-    NSString *jsonRequestData = [loginRequestData bv_jsonStringWithPrettyPrint:true];
-    NSLog(@"Json Data = %@", jsonRequestData);
-    
-    //Setting Content-Type: application/json Header, else the api throws 404 NOT Found Error
-    [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:@"Content-Type" value:@"application/json"];
-    
-    NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
-    
-    [[RKObjectManager sharedManager] postObject:jsonRequestData path:@"api/user/login/"
-                                     parameters: loginRequestData
-                                        success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                            
-                                            _users = mappingResult.array ;
-                                            User *loggedInUser = [_users objectAtIndex:0];
-                                            NSLog(@"id = %@, username = %@, authToken = %@", loggedInUser.id,
-                                                  loggedInUser.username, loggedInUser.authToken );
-                                        }
-                                        failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                            NSLog(@"Request Failed");
-                                        }
-     ];
+
     
 }
+- (IBAction)forgotPasswordClicked:(id)sender {
+    NSLog(@"I forgot");
+}
+
+- (void) notifyUserWithLogin: (NSString *)response
+{
+    [self.view makeToast:response
+     duration:2.0 position:@"center"];
+}
+
+
+// Save Userdata in NSUserDefaults
+- (void) preserveUser:(User *) user
+{
+    //Prepare Data
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:user.id forKey:KEY_USER_ID];
+    [defaults setObject:user.username forKey:KEY_USER_NAME];
+    [defaults setObject:user.authToken forKey:KEY_USER_AUTH_TOKEN];
+    
+    [defaults synchronize];
+    
+    NSLog(@"Data Saved Successfully");
+    
+}
+
 
 @end
