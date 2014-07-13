@@ -7,7 +7,9 @@
 //
 
 #import "TipsTableViewController.h"
-
+#import <RestKit.h>
+#import "Tip.h"
+#import "TipCell.h"
 @interface TipsTableViewController ()
 
 @end
@@ -26,12 +28,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    NSLog(@"Configuring Rest Kit for Tip Fetching");
+    NSLog(@"Tips will Load");
+    [self loadTips];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +53,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return _tips.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    TipCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TipCell" forIndexPath:indexPath];
+    Tip *tip = _tips[indexPath.row];
+    cell.leagueNameLabel.text = tip.leagueType;
+    cell.homeTeamLabel.text = tip.homeTeam;
+    cell.awayTeamLabel.text = tip.awayTeam;
+    cell.isVerifiedLabel.text = tip.isPredictionVerified;
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -115,5 +126,53 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) loadTips
+{
+    RKObjectMapping *tipsMapping = [RKObjectMapping mappingForClass:[Tip class]];
+    
+    
+    
+    [tipsMapping addAttributeMappingsFromArray:@[@"id", @"leagueType",
+                                                 @"flagURL", @"homeTeam", @"awayTeam", @"isCompleted",
+                                                 @"tipDetail", @"DateTimeCreated",
+                                                 @"isPredictionVerified"]];
+    
+    RKResponseDescriptor *tipFetchingDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:tipsMapping method:RKRequestMethodGET pathPattern:nil keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    
+    [[RKObjectManager sharedManager] addResponseDescriptor:tipFetchingDescriptor];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *authToken = [defaults objectForKey:KEY_USER_AUTH_TOKEN];
+    
+    NSString *basicAuthString = [NSString stringWithFormat:@"Basic %@",authToken];
+    
+    NSDictionary *params = @{@"isPushed":@"True"};
+
+    
+    //Setting Content-Type: application/json Header, else the api throws 404 NOT Found Error
+    [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_AUTHORIZATON value:basicAuthString];
+    [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_CONTENT_TYPE value:RKMIMETypeJSON];
+    //[[[RKObjectManager sharedManager] HTTPClient] setAuthorizationHeaderWithUsername:email password:pass];
+
+    NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"api/predictions/" parameters:params
+                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  
+                                                  _tips = mappingResult.array;
+                                                  Tip *tip = [_tips objectAtIndex:0];
+                                                  NSLog(@"Tip LeagueType = %@", tip.leagueType);
+                                                  [self.tableView reloadData];
+                                                  
+                                              } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                  NSLog(@"WTF");
+                                              }];
+    
+    
+}
 
 @end

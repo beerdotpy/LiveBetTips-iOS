@@ -20,4 +20,7 @@ extern NSString* const KEY_PASSWORD;
 extern NSString* const HEADER_AUTHORIZATON;
 extern NSString* const HEADER_CONTENT_TYPE;
 
+extern NSString* const PATH_LOGIN;
+extern NSString* const PATH_USER_CREATE;
+extern NSString* const PATH_GET_PREDICTIONS;
 @end

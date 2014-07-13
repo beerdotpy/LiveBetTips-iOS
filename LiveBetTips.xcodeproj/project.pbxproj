@@ -22,7 +22,9 @@
 		FF056F6B1960AA6F000986E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F4D1960AA6F000986E0 /* UIKit.framework */; };
 		FF056F731960AA6F000986E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF056F711960AA6F000986E0 /* InfoPlist.strings */; };
 		FF056F751960AA6F000986E0 /* LiveBetTipsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F741960AA6F000986E0 /* LiveBetTipsTests.m */; };
+		FF068E0E1971BD2100308F79 /* Tip.m in Sources */ = {isa = PBXBuildFile; fileRef = FF068E0D1971BD2100308F79 /* Tip.m */; };
 		FF1665F3196842E0000AC897 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1665F2196842E0000AC897 /* User.m */; };
+		FF4E16991972BFB10049743B /* TipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4E16981972BFB10049743B /* TipCell.m */; };
 		FF52B4461965EDE000BDD10B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF52B4451965EDE000BDD10B /* SignupViewController.m */; };
 		FF52B4491965EE2700BDD10B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF52B4481965EE2700BDD10B /* LoginViewController.m */; };
 		FFCEAB73196A815B001FFEE0 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEAB72196A815B001FFEE0 /* AppConstants.m */; };
@@ -61,8 +63,12 @@
 		FF056F701960AA6F000986E0 /* LiveBetTipsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiveBetTipsTests-Info.plist"; sourceTree = "<group>"; };
 		FF056F721960AA6F000986E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF056F741960AA6F000986E0 /* LiveBetTipsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBetTipsTests.m; sourceTree = "<group>"; };
+		FF068E0C1971BD2100308F79 /* Tip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tip.h; sourceTree = "<group>"; };
+		FF068E0D1971BD2100308F79 /* Tip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tip.m; sourceTree = "<group>"; };
 		FF1665F1196842E0000AC897 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		FF1665F2196842E0000AC897 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		FF4E16971972BFB10049743B /* TipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipCell.h; sourceTree = "<group>"; };
+		FF4E16981972BFB10049743B /* TipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipCell.m; sourceTree = "<group>"; };
 		FF52B4441965EDE000BDD10B /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		FF52B4451965EDE000BDD10B /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		FF52B4471965EE2700BDD10B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -150,6 +156,10 @@
 				FFCEAB72196A815B001FFEE0 /* AppConstants.m */,
 				FFCEAB74196A84A8001FFEE0 /* TipsTableViewController.h */,
 				FFCEAB75196A84A8001FFEE0 /* TipsTableViewController.m */,
+				FF068E0C1971BD2100308F79 /* Tip.h */,
+				FF068E0D1971BD2100308F79 /* Tip.m */,
+				FF4E16971972BFB10049743B /* TipCell.h */,
+				FF4E16981972BFB10049743B /* TipCell.m */,
 			);
 			path = LiveBetTips;
 			sourceTree = "<group>";
@@ -320,7 +330,9 @@
 				FFCEAB73196A815B001FFEE0 /* AppConstants.m in Sources */,
 				FFCEAB76196A84A8001FFEE0 /* TipsTableViewController.m in Sources */,
 				FF1665F3196842E0000AC897 /* User.m in Sources */,
+				FF4E16991972BFB10049743B /* TipCell.m in Sources */,
 				FF52B4461965EDE000BDD10B /* SignupViewController.m in Sources */,
+				FF068E0E1971BD2100308F79 /* Tip.m in Sources */,
 				FF056F561960AA6F000986E0 /* main.m in Sources */,
 				FF52B4491965EE2700BDD10B /* LoginViewController.m in Sources */,
 			);

@@ -14,6 +14,8 @@
 
 @interface LoginViewController ()
 
+@property RKResponseDescriptor *loginResponseDescriptor;
+@property RKObjectManager *objectManager;
 @end
 
 @interface NSDictionary (BVJSONString)
@@ -55,7 +57,6 @@
     // Do any additional setup after loading the view.
     
     [self configureRestKit];
-    //[self loginUser];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,18 +75,7 @@
 
 - (IBAction)loginButtonClicked:(id)sender {
     
-    //Start Displaying Progress Dialog
-    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]
-                                          initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
-    indicator.center = self.view.center;
-    [self.view addSubview:indicator];
-    [indicator bringSubviewToFront:self.view];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
-    
-    [indicator startAnimating];
     [self loginUser:sender];
-    [indicator stopAnimating];
 }
 
 - (void) configureRestKit
@@ -94,16 +84,16 @@
     NSURL *baseURL = [NSURL URLWithString:BASE_URL];
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     //initialize RestKit
-    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    _objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
     
     //setup object mappings
     RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[User class]];
     [userMapping addAttributeMappingsFromArray:@[KEY_USER_ID,KEY_USER_NAME, KEY_USER_AUTH_TOKEN]];
     
-    RKResponseDescriptor *loginResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping method:RKRequestMethodPOST pathPattern:@"api/user/login/" keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
+     _loginResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping method:RKRequestMethodPOST pathPattern:nil keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     
-    [objectManager addResponseDescriptor:loginResponseDescriptor];
+    [_objectManager addResponseDescriptor:_loginResponseDescriptor];
     
 }
 
@@ -144,7 +134,7 @@
         
         NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
         
-        [[RKObjectManager sharedManager] postObject:jsonRequestData path:@"api/user/login/"
+        [[RKObjectManager sharedManager] postObject: nil path:@"api/user/login/"
                                          parameters: loginRequestData
                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                 
@@ -154,6 +144,7 @@
                                                       loggedInUser.username, loggedInUser.authToken );
                                                 [self preserveUser:loggedInUser];
                                                 [self notifyUserWithLogin:@"Logged In Successfully"];
+                                                [_objectManager removeResponseDescriptor:_loginResponseDescriptor];
                                                 [self performSegueWithIdentifier:@"loginToTipsSegue" sender:sender];
                                                 
                                             }

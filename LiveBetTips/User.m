@@ -13,6 +13,6 @@
 @synthesize id;
 @synthesize username;
 @synthesize authToken;
-
+@synthesize email;
 
 @end

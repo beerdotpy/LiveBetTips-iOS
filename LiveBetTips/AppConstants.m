@@ -20,4 +20,8 @@ NSString* const KEY_PASSWORD = @"password";
 NSString* const HEADER_AUTHORIZATON = @"Authorization";
 NSString* const HEADER_CONTENT_TYPE = @"Content-Type";
 
+NSString* const PATH_LOGIN = @"api/user/login/";
+NSString* const PATH_USER_CREATE = @"api/user/";
+NSString* const PATH_GET_PREDICTIONS = @"api/predictions/";
+
 @end

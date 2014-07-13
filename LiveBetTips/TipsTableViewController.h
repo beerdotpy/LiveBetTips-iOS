@@ -10,4 +10,6 @@
 
 @interface TipsTableViewController : UITableViewController
 
+@property NSArray *tips;
+
 @end
