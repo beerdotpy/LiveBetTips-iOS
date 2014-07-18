@@ -15,7 +15,6 @@
 		FF056F561960AA6F000986E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F551960AA6F000986E0 /* main.m */; };
 		FF056F5A1960AA6F000986E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F591960AA6F000986E0 /* AppDelegate.m */; };
 		FF056F5D1960AA6F000986E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF056F5B1960AA6F000986E0 /* Main.storyboard */; };
-		FF056F601960AA6F000986E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF056F5F1960AA6F000986E0 /* ViewController.m */; };
 		FF056F621960AA6F000986E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF056F611960AA6F000986E0 /* Images.xcassets */; };
 		FF056F691960AA6F000986E0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F681960AA6F000986E0 /* XCTest.framework */; };
 		FF056F6A1960AA6F000986E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF056F491960AA6E000986E0 /* Foundation.framework */; };
@@ -29,6 +28,7 @@
 		FF52B4491965EE2700BDD10B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF52B4481965EE2700BDD10B /* LoginViewController.m */; };
 		FFCEAB73196A815B001FFEE0 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEAB72196A815B001FFEE0 /* AppConstants.m */; };
 		FFCEAB76196A84A8001FFEE0 /* TipsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEAB75196A84A8001FFEE0 /* TipsTableViewController.m */; };
+		FFF1251C197931F000CF0DF0 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF1251B197931F000CF0DF0 /* MainVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,6 @@
 		FF056F581960AA6F000986E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF056F591960AA6F000986E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF056F5C1960AA6F000986E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FF056F5E1960AA6F000986E0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FF056F5F1960AA6F000986E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FF056F611960AA6F000986E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF056F671960AA6F000986E0 /* LiveBetTipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveBetTipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF056F681960AA6F000986E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -77,6 +75,8 @@
 		FFCEAB72196A815B001FFEE0 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
 		FFCEAB74196A84A8001FFEE0 /* TipsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsTableViewController.h; sourceTree = "<group>"; };
 		FFCEAB75196A84A8001FFEE0 /* TipsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsTableViewController.m; sourceTree = "<group>"; };
+		FFF1251A197931F000CF0DF0 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		FFF1251B197931F000CF0DF0 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +142,6 @@
 				FF056F581960AA6F000986E0 /* AppDelegate.h */,
 				FF056F591960AA6F000986E0 /* AppDelegate.m */,
 				FF056F5B1960AA6F000986E0 /* Main.storyboard */,
-				FF056F5E1960AA6F000986E0 /* ViewController.h */,
-				FF056F5F1960AA6F000986E0 /* ViewController.m */,
 				FF056F611960AA6F000986E0 /* Images.xcassets */,
 				FF056F501960AA6F000986E0 /* Supporting Files */,
 				FF52B4441965EDE000BDD10B /* SignupViewController.h */,
@@ -160,6 +158,8 @@
 				FF068E0D1971BD2100308F79 /* Tip.m */,
 				FF4E16971972BFB10049743B /* TipCell.h */,
 				FF4E16981972BFB10049743B /* TipCell.m */,
+				FFF1251A197931F000CF0DF0 /* MainVC.h */,
+				FFF1251B197931F000CF0DF0 /* MainVC.m */,
 			);
 			path = LiveBetTips;
 			sourceTree = "<group>";
@@ -325,8 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF056F601960AA6F000986E0 /* ViewController.m in Sources */,
 				FF056F5A1960AA6F000986E0 /* AppDelegate.m in Sources */,
+				FFF1251C197931F000CF0DF0 /* MainVC.m in Sources */,
 				FFCEAB73196A815B001FFEE0 /* AppConstants.m in Sources */,
 				FFCEAB76196A84A8001FFEE0 /* TipsTableViewController.m in Sources */,
 				FF1665F3196842E0000AC897 /* User.m in Sources */,
@@ -463,7 +463,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "LiveBetTips/LiveBetTips-Prefix.pch";
 				INFOPLIST_FILE = "LiveBetTips/LiveBetTips-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -478,7 +478,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "LiveBetTips/LiveBetTips-Prefix.pch";
 				INFOPLIST_FILE = "LiveBetTips/LiveBetTips-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

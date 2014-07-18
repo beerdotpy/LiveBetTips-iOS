@@ -1,5 +1,6 @@
 PODS:
   - AFNetworking (1.3.4)
+  - AMSlideMenu (1.5.3)
   - MBProgressHUD (0.8)
   - RestKit (0.20.3):
     - RestKit/Core
@@ -21,12 +22,14 @@ PODS:
   - TransitionKit (1.1.1)
 
 DEPENDENCIES:
+  - AMSlideMenu (~> 1.5.3)
   - MBProgressHUD (~> 0.8)
   - RestKit (~> 0.20.3)
   - Toast (~> 2.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 80c4e0652b08eb34e25b9c0ff3c82556fe5967b4
+  AMSlideMenu: ab0c9313c74eac61e360d2a714d2d8202f6de916
   MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
   RestKit: 7f9490e709ee745e166c4d2aa7a8d132831275b0
   SOCKit: d8d0dd3688ae1026c12367570da8fa8e1a6980fb

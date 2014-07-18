@@ -55,6 +55,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"I am here now");
     
     [self configureRestKit];
 }
