@@ -25,10 +25,42 @@
     NSString *identifier;
     switch (indexPath.row) {
         case 0:
-            identifier = @"firstSegue";
+            //Logo
+            identifier = @"loginSegue";
+
             break;
         case 1:
-            identifier = @"secondSegue";
+            //My Tips
+            identifier = @"loginSegue";
+
+            break;
+        case 2:
+            //Contact Us
+            identifier = @"contactUsSegue";
+
+            break;
+        case 3:
+            //Info
+            identifier = @"loginSegue";
+
+            break;
+        case 4:
+            //Login
+            identifier = @"loginSegue";
+            break;
+        case 5:
+            //Register
+            identifier = @"registerSegue";
+            break;
+        case 6:
+            //Buy Tips
+            identifier = @"loginSegue";
+
+            break;
+        case 7:
+            //Settings
+            identifier = @"loginSegue";
+
             break;
     }
     

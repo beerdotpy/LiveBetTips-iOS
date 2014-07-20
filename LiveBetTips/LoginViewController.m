@@ -124,7 +124,9 @@
     } else {
         //Construct Dictionary Here
         loginRequestData = @{KEY_EMAIL:email,
-                             KEY_PASSWORD:password,};
+                             KEY_PASSWORD:password,
+                             @"deviceType":@"ios",
+                             @"deviceID":@"abc"};
         
         //Convert Dictionary into JSON String
         NSString *jsonRequestData = [loginRequestData bv_jsonStringWithPrettyPrint:true];

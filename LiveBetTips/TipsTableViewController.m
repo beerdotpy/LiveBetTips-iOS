@@ -10,11 +10,15 @@
 #import <RestKit.h>
 #import "Tip.h"
 #import "TipCell.h"
+#import "TipDetailViewController.h"
+
 @interface TipsTableViewController ()
 
 @end
 
 @implementation TipsTableViewController
+
+int rowNumber;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -75,6 +79,22 @@
     // Configure the cell...
     
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    Tip *tip = _tips[rowNumber];
+    TipDetailViewController* destinationViewController = segue.destinationViewController;
+    destinationViewController.leagueType = tip.leagueType;
+    destinationViewController.homeVsAwayTeams = [NSString stringWithFormat:@"%@ vs %@", tip.homeTeam, tip.awayTeam];
+    destinationViewController.tipId = tip.id;
+    
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    rowNumber = indexPath.row;
+    [self performSegueWithIdentifier:@"predictionDetailSegue" sender:nil];
 }
 
 

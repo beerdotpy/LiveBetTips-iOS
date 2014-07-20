@@ -26,6 +26,9 @@
 		FF4E16991972BFB10049743B /* TipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4E16981972BFB10049743B /* TipCell.m */; };
 		FF52B4461965EDE000BDD10B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF52B4451965EDE000BDD10B /* SignupViewController.m */; };
 		FF52B4491965EE2700BDD10B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF52B4481965EE2700BDD10B /* LoginViewController.m */; };
+		FF973BB8197C399300EF4A2A /* TipDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF973BB7197C399300EF4A2A /* TipDetailViewController.m */; };
+		FF973BBB197C39A000EF4A2A /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF973BBA197C39A000EF4A2A /* ContactUsViewController.m */; };
+		FF973BBE197C412500EF4A2A /* TipDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FF973BBD197C412500EF4A2A /* TipDetail.m */; };
 		FFCEAB73196A815B001FFEE0 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEAB72196A815B001FFEE0 /* AppConstants.m */; };
 		FFCEAB76196A84A8001FFEE0 /* TipsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEAB75196A84A8001FFEE0 /* TipsTableViewController.m */; };
 		FFF1251C197931F000CF0DF0 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF1251B197931F000CF0DF0 /* MainVC.m */; };
@@ -71,6 +74,12 @@
 		FF52B4451965EDE000BDD10B /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		FF52B4471965EE2700BDD10B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		FF52B4481965EE2700BDD10B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		FF973BB6197C399300EF4A2A /* TipDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipDetailViewController.h; sourceTree = "<group>"; };
+		FF973BB7197C399300EF4A2A /* TipDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipDetailViewController.m; sourceTree = "<group>"; };
+		FF973BB9197C39A000EF4A2A /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		FF973BBA197C39A000EF4A2A /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		FF973BBC197C412500EF4A2A /* TipDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipDetail.h; sourceTree = "<group>"; };
+		FF973BBD197C412500EF4A2A /* TipDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipDetail.m; sourceTree = "<group>"; };
 		FFCEAB71196A815B001FFEE0 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		FFCEAB72196A815B001FFEE0 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
 		FFCEAB74196A84A8001FFEE0 /* TipsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsTableViewController.h; sourceTree = "<group>"; };
@@ -160,6 +169,12 @@
 				FF4E16981972BFB10049743B /* TipCell.m */,
 				FFF1251A197931F000CF0DF0 /* MainVC.h */,
 				FFF1251B197931F000CF0DF0 /* MainVC.m */,
+				FF973BB6197C399300EF4A2A /* TipDetailViewController.h */,
+				FF973BB7197C399300EF4A2A /* TipDetailViewController.m */,
+				FF973BB9197C39A000EF4A2A /* ContactUsViewController.h */,
+				FF973BBA197C39A000EF4A2A /* ContactUsViewController.m */,
+				FF973BBC197C412500EF4A2A /* TipDetail.h */,
+				FF973BBD197C412500EF4A2A /* TipDetail.m */,
 			);
 			path = LiveBetTips;
 			sourceTree = "<group>";
@@ -326,7 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF056F5A1960AA6F000986E0 /* AppDelegate.m in Sources */,
+				FF973BB8197C399300EF4A2A /* TipDetailViewController.m in Sources */,
 				FFF1251C197931F000CF0DF0 /* MainVC.m in Sources */,
+				FF973BBB197C39A000EF4A2A /* ContactUsViewController.m in Sources */,
 				FFCEAB73196A815B001FFEE0 /* AppConstants.m in Sources */,
 				FFCEAB76196A84A8001FFEE0 /* TipsTableViewController.m in Sources */,
 				FF1665F3196842E0000AC897 /* User.m in Sources */,
@@ -335,6 +352,7 @@
 				FF068E0E1971BD2100308F79 /* Tip.m in Sources */,
 				FF056F561960AA6F000986E0 /* main.m in Sources */,
 				FF52B4491965EE2700BDD10B /* LoginViewController.m in Sources */,
+				FF973BBE197C412500EF4A2A /* TipDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
