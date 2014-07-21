@@ -291,7 +291,7 @@
                         <outlet property="tf_email" destination="VPX-Uc-U0v" id="fZN-VF-Hwo"/>
                         <outlet property="tf_password" destination="NKa-SS-8s4" id="cG8-wp-zqc"/>
                         <segue destination="3by-X7-v6Z" kind="push" identifier="loginToSignUpSegue" customClass="ECSlidingSegue" id="Snc-nj-Ubj"/>
-                        <segue destination="KtN-c8-hkL" kind="push" identifier="loginToTipsSegue" id="Sds-RW-N1o"/>
+                        <segue destination="KtN-c8-hkL" kind="push" identifier="loginToTipsSegue" id="mQw-ci-by8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -313,10 +313,10 @@
             </objects>
             <point key="canvasLocation" x="170" y="-1015"/>
         </scene>
-        <!--View Controller - Contact Us-->
+        <!--Contact Us View Controller - Contact Us-->
         <scene sceneID="pbE-Kq-49y">
             <objects>
-                <viewController id="PqT-3l-hy8" sceneMemberID="viewController">
+                <viewController id="PqT-3l-hy8" customClass="ContactUsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w15-gF-1wl"/>
                         <viewControllerLayoutGuide type="bottom" id="Ps8-bX-Tqg"/>
@@ -333,31 +333,54 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Message" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-Gb-Ut3">
-                                <rect key="frame" x="20" y="120" width="280" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLU-kC-e6Z">
-                                <rect key="frame" x="137" y="218" width="46" height="30"/>
+                                <rect key="frame" x="137" y="166" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6729763419" green="0.70762158360000005" blue="0.040031714580000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Send">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButtonClicked:" destination="PqT-3l-hy8" eventType="touchUpInside" id="d4E-hg-54z"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Message" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ns-om-c8b">
+                                <rect key="frame" x="20" y="120" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Us" id="ss3-2z-H6z"/>
+                    <connections>
+                        <outlet property="messageOutlet" destination="3ns-om-c8b" id="f0c-2d-CAF"/>
+                        <outlet property="subjectOutlet" destination="qqv-rI-bHF" id="iXo-K4-48O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfK-TZ-9H2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="849" y="-1015"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Z5-gz-MT4">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="kRD-m1-kGG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rYh-7I-f0Q"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rhP-pF-0cm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KtN-c8-hkL" kind="relationship" relationship="rootViewController" id="k7z-iw-llU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sf9-9b-eaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-820"/>
         </scene>
         <!--Tips Table View Controller - TipsViewController-->
         <scene sceneID="Sc8-n1-A3Z">
@@ -477,7 +500,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIa-Gg-zYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="-218"/>
+            <point key="canvasLocation" x="1696" y="-218"/>
         </scene>
         <!--Tip Detail View Controller - Prediction Detail-->
         <scene sceneID="oOt-b1-ffY">
@@ -636,7 +659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT4-f0-wkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="862"/>
+            <point key="canvasLocation" x="1373" y="862"/>
         </scene>
     </scenes>
     <resources>
@@ -648,6 +671,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="mQw-ci-by8"/>
         <segue reference="Snc-nj-Ubj"/>
     </inferredMetricsTieBreakers>
 </document>

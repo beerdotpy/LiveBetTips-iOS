@@ -32,7 +32,7 @@ int rowNumber;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     NSLog(@"Configuring Rest Kit for Tip Fetching");
     NSLog(@"Tips will Load");
     [self loadTips];
