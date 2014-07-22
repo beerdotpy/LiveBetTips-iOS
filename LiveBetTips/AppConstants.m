@@ -16,6 +16,7 @@ NSString* const KEY_USER_ID = @"id";
 NSString* const KEY_USER_AUTH_TOKEN = @"authToken";
 NSString* const KEY_EMAIL = @"email";
 NSString* const KEY_PASSWORD = @"password";
+NSString* const KEY_APNS_TOKEN = @"APNS TOKEN";
 
 NSString* const HEADER_AUTHORIZATON = @"Authorization";
 NSString* const HEADER_CONTENT_TYPE = @"Content-Type";

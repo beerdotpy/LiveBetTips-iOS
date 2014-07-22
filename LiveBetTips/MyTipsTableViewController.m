@@ -1,24 +1,25 @@
 //
-//  TipsTableViewController.m
+//  MyTipsTableViewController.m
 //  LiveBetTips
 //
-//  Created by Ishan Khanna on 07/07/14.
+//  Created by Ishan Khanna on 22/07/14.
 //  Copyright (c) 2014 Ishan Khanna. All rights reserved.
 //
 
-#import "TipsTableViewController.h"
+#import "MyTipsTableViewController.h"
 #import <RestKit.h>
 #import "Tip.h"
 #import "TipCell.h"
 #import "TipDetailViewController.h"
 
-@interface TipsTableViewController ()
+@interface MyTipsTableViewController ()
 
 @end
 
-@implementation TipsTableViewController
+@implementation MyTipsTableViewController
 
 int rowNumber;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,14 +35,7 @@ int rowNumber;
     [super viewDidLoad];
     
     [self loadTips];
-    
-    
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -79,7 +73,7 @@ int rowNumber;
     destinationViewController.homeVsAwayTeams = [NSString stringWithFormat:@"%@ vs %@", tip.homeTeam, tip.awayTeam];
     destinationViewController.tipId = tip.id;
     
-
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -113,17 +107,19 @@ int rowNumber;
     NSString *basicAuthString = [NSString stringWithFormat:@"Basic %@",authToken];
     
     NSDictionary *params = @{@"isPushed":@"True"};
+    
+    NSString *mytipsPath = [NSString stringWithFormat:@"api/user/%@/predictions/", [defaults objectForKey:KEY_USER_ID]];
 
     
     //Setting Content-Type: application/json Header, else the api throws 404 NOT Found Error
     [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_AUTHORIZATON value:basicAuthString];
     [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_CONTENT_TYPE value:RKMIMETypeJSON];
     //[[[RKObjectManager sharedManager] HTTPClient] setAuthorizationHeaderWithUsername:email password:pass];
-
+    
     NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
     //RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
     
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"api/predictions/" parameters:params
+    [[RKObjectManager sharedManager] getObjectsAtPath:mytipsPath parameters:params
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   
                                                   _tips = mappingResult.array;

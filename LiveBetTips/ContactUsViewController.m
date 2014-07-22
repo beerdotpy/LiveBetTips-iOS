@@ -70,10 +70,10 @@
 -(void)sendMessageWithSubject:(NSString *)subject andMessage:(NSString *)message {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    
+    NSString *email = [defaults objectForKey:KEY_USER_NAME];
+    NSLog(@"%@", email);
     NSDictionary *contactUsData;
-    contactUsData = @{KEY_EMAIL:[defaults objectForKey:KEY_USER_NAME],
+    contactUsData = @{KEY_EMAIL:email,
                               @"content":message,
                             @"subject":subject};
     

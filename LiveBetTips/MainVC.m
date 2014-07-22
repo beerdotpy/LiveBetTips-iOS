@@ -22,43 +22,49 @@
 
 - (NSString *) segueIdentifierForIndexPathInLeftMenu:(NSIndexPath *)indexPath
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *identifier;
     switch (indexPath.row) {
         case 0:
             //Logo
+            
             identifier = @"loginSegue";
 
             break;
         case 1:
             //My Tips
-            identifier = @"loginSegue";
-
+            NSLog(@"HERE NOW");
+            if ([[defaults objectForKey:@"loggedIn"] isEqualToString:@"YES"]) {
+                identifier = @"mytipsSegue";
+            } else {
+                identifier = @"loginSegue";
+            }
             break;
         case 2:
+            //Tips
+            identifier = @"tipsSegue";
+
+            break;
+        case 3:
             //Contact Us
             identifier = @"contactUsSegue";
 
             break;
-        case 3:
-            //Info
-            identifier = @"loginSegue";
-
-            break;
         case 4:
-            //Login
+            //Info
             identifier = @"loginSegue";
             break;
         case 5:
-            //Register
-            identifier = @"registerSegue";
+            //Login
+            identifier = @"loginSegue";
             break;
         case 6:
-            //Buy Tips
-            identifier = @"loginSegue";
+            //Register
+            identifier = @"registerSegue";
 
             break;
         case 7:
-            //Settings
+            //Buy Tips
             identifier = @"loginSegue";
 
             break;
@@ -66,6 +72,17 @@
     
     return identifier;
 }
+
+-(void)configureLeftMenuButton:(UIButton *)button
+{
+    CGRect frame = button.frame;
+    frame.origin = (CGPoint){0,0};
+    frame.size = (CGSize){40,40};
+    button.frame = frame;
+    
+    [button setImage:[UIImage imageNamed:@"icon"] forState:UIControlStateNormal];
+}
+
 
 
 @end

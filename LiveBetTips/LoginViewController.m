@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "User.h"
 #import <Toast+UIView.h>
+#import "UIViewController+AMSlideMenu.h"
 
 @interface LoginViewController ()
 
@@ -126,7 +127,7 @@
         loginRequestData = @{KEY_EMAIL:email,
                              KEY_PASSWORD:password,
                              @"deviceType":@"ios",
-                             @"deviceID":@"abc"};
+                             @"deviceID":[[NSUserDefaults standardUserDefaults] objectForKey:KEY_APNS_TOKEN]};
         
         //Convert Dictionary into JSON String
         NSString *jsonRequestData = [loginRequestData bv_jsonStringWithPrettyPrint:true];
@@ -136,19 +137,21 @@
         [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_CONTENT_TYPE value:RKMIMETypeJSON];
         
         NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
-        
+        //RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
         [[RKObjectManager sharedManager] postObject: nil path:@"api/user/login/"
                                          parameters: loginRequestData
                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                 
                                                 _users = mappingResult.array ;
                                                 User *loggedInUser = [_users objectAtIndex:0];
-                                                NSLog(@"id = %@, username = %@, authToken = %@", loggedInUser.id,
-                                                      loggedInUser.username, loggedInUser.authToken );
-                                                [self preserveUser:loggedInUser];
+                                                //NSLog(@"id = %@, username = %@, authToken = %@", loggedInUser.id,
+                                                //      loggedInUser.username, loggedInUser.authToken );
+                                                [self preserveUser:loggedInUser withEmail:email];
                                                 [self notifyUserWithLogin:@"Logged In Successfully"];
                                                 [_objectManager removeResponseDescriptor:_loginResponseDescriptor];
-                                                [self performSegueWithIdentifier:@"loginToTipsSegue" sender:sender];
+                                                //[self performSegueWithIdentifier:@"loginToTipsSegue" sender:sender];
+                                                
+                                                [self.mainSlideMenu.leftMenu performSegueWithIdentifier:@"tipsSegue" sender:sender];
                                                 
                                             }
                                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
@@ -172,15 +175,16 @@
 
 
 // Save Userdata in NSUserDefaults
-- (void) preserveUser:(User *) user
+- (void) preserveUser:(User *) user withEmail:(NSString *)email
 {
     //Prepare Data
-    
+    NSString *boolean = @"YES";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     [defaults setObject:user.id forKey:KEY_USER_ID];
-    [defaults setObject:user.username forKey:KEY_USER_NAME];
+    [defaults setObject:email forKey:KEY_USER_NAME];
     [defaults setObject:user.authToken forKey:KEY_USER_AUTH_TOKEN];
+    [defaults setObject:boolean forKey:@"loggedIn"];
     
     [defaults synchronize];
     

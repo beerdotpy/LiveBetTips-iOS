@@ -16,6 +16,7 @@ extern NSString* const KEY_USER_ID;
 extern NSString* const KEY_USER_AUTH_TOKEN;
 extern NSString* const KEY_EMAIL;
 extern NSString* const KEY_PASSWORD;
+extern NSString* const KEY_APNS_TOKEN;
 
 extern NSString* const HEADER_AUTHORIZATON;
 extern NSString* const HEADER_CONTENT_TYPE;
