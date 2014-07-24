@@ -165,6 +165,7 @@
 }
 - (IBAction)forgotPasswordClicked:(id)sender {
     NSLog(@"I forgot");
+    [self performSegueWithIdentifier:@"forgotPasswordSegue" sender:sender];
 }
 
 - (void) notifyUserWithLogin: (NSString *)response

@@ -33,6 +33,9 @@
 		FF973BBE197C412500EF4A2A /* TipDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FF973BBD197C412500EF4A2A /* TipDetail.m */; };
 		FFCEAB73196A815B001FFEE0 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEAB72196A815B001FFEE0 /* AppConstants.m */; };
 		FFCEAB76196A84A8001FFEE0 /* TipsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCEAB75196A84A8001FFEE0 /* TipsTableViewController.m */; };
+		FFE37D1C1980271600227C5D /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE37D1B1980271600227C5D /* ForgotPasswordViewController.m */; };
+		FFE37D1F1980325500227C5D /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE37D1E1980325500227C5D /* FilterViewController.m */; };
+		FFE37D2219803CFE00227C5D /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE37D2119803CFE00227C5D /* Filter.m */; };
 		FFF1251C197931F000CF0DF0 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF1251B197931F000CF0DF0 /* MainVC.m */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +92,12 @@
 		FFCEAB72196A815B001FFEE0 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
 		FFCEAB74196A84A8001FFEE0 /* TipsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsTableViewController.h; sourceTree = "<group>"; };
 		FFCEAB75196A84A8001FFEE0 /* TipsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsTableViewController.m; sourceTree = "<group>"; };
+		FFE37D1A1980271600227C5D /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		FFE37D1B1980271600227C5D /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
+		FFE37D1D1980325500227C5D /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		FFE37D1E1980325500227C5D /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		FFE37D2019803CFE00227C5D /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		FFE37D2119803CFE00227C5D /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
 		FFF1251A197931F000CF0DF0 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		FFF1251B197931F000CF0DF0 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +191,12 @@
 				FF973BBD197C412500EF4A2A /* TipDetail.m */,
 				FF1F2D2C197EDEC800577C67 /* MyTipsTableViewController.h */,
 				FF1F2D2D197EDEC800577C67 /* MyTipsTableViewController.m */,
+				FFE37D1A1980271600227C5D /* ForgotPasswordViewController.h */,
+				FFE37D1B1980271600227C5D /* ForgotPasswordViewController.m */,
+				FFE37D1D1980325500227C5D /* FilterViewController.h */,
+				FFE37D1E1980325500227C5D /* FilterViewController.m */,
+				FFE37D2019803CFE00227C5D /* Filter.h */,
+				FFE37D2119803CFE00227C5D /* Filter.m */,
 			);
 			path = LiveBetTips;
 			sourceTree = "<group>";
@@ -352,8 +367,11 @@
 				FF056F5A1960AA6F000986E0 /* AppDelegate.m in Sources */,
 				FF973BB8197C399300EF4A2A /* TipDetailViewController.m in Sources */,
 				FFF1251C197931F000CF0DF0 /* MainVC.m in Sources */,
+				FFE37D1C1980271600227C5D /* ForgotPasswordViewController.m in Sources */,
 				FF1F2D2E197EDEC800577C67 /* MyTipsTableViewController.m in Sources */,
 				FF973BBB197C39A000EF4A2A /* ContactUsViewController.m in Sources */,
+				FFE37D2219803CFE00227C5D /* Filter.m in Sources */,
+				FFE37D1F1980325500227C5D /* FilterViewController.m in Sources */,
 				FFCEAB73196A815B001FFEE0 /* AppConstants.m in Sources */,
 				FFCEAB76196A84A8001FFEE0 /* TipsTableViewController.m in Sources */,
 				FF1665F3196842E0000AC897 /* User.m in Sources */,
