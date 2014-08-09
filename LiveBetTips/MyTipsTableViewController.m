@@ -11,7 +11,7 @@
 #import "Tip.h"
 #import "TipCell.h"
 #import "TipDetailViewController.h"
-
+#import <MBProgressHUD/MBProgressHUD.h>
 @interface MyTipsTableViewController ()
 
 @end
@@ -34,8 +34,15 @@ int rowNumber;
 {
     [super viewDidLoad];
     
+    _creditsLabel.text = [[NSString alloc] initWithFormat:@"Credits : %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"usercredit"]];
+    
     [self loadTips];
 
+}
+- (IBAction)filterButtonClicked:(id)sender {
+    
+    [self performSegueWithIdentifier:@"filterSegue" sender:sender];
+    
 }
 
 #pragma mark - Table view data source
@@ -67,11 +74,23 @@ int rowNumber;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    Tip *tip = _tips[rowNumber];
-    TipDetailViewController* destinationViewController = segue.destinationViewController;
-    destinationViewController.leagueType = tip.leagueType;
-    destinationViewController.homeVsAwayTeams = [NSString stringWithFormat:@"%@ vs %@", tip.homeTeam, tip.awayTeam];
-    destinationViewController.tipId = tip.id;
+    
+    NSLog(@"%d Sender Id = ", [sender tag]);
+    
+    if ([sender tag] == 1001) {
+        
+        FilterViewController *fvc = (FilterViewController *)segue.destinationViewController;
+        [fvc setDelegate:self];
+        
+    } else {
+        Tip *tip = _tips[rowNumber];
+        TipDetailViewController* destinationViewController = segue.destinationViewController;
+        destinationViewController.leagueType = tip.leagueType;
+        destinationViewController.homeVsAwayTeams = [NSString stringWithFormat:@"%@ vs %@", tip.homeTeam, tip.awayTeam];
+        destinationViewController.tipId = tip.id;
+    }
+    
+
     
     
 }
@@ -85,6 +104,12 @@ int rowNumber;
 
 - (void) loadTips
 {
+    MBProgressHUD* HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:HUD];
+    
+    HUD.labelText = @"Loading...";
+    [HUD show:YES];
+    
     RKObjectMapping *tipsMapping = [RKObjectMapping mappingForClass:[Tip class]];
     
     
@@ -124,12 +149,76 @@ int rowNumber;
                                                   
                                                   _tips = mappingResult.array;
                                                   [self.tableView reloadData];
+                                                  [HUD hide:YES];
                                                   
                                               } failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   NSLog(@"WTF");
+                                                  [HUD hide:YES];
                                               }];
     
     [[RKObjectManager sharedManager] removeResponseDescriptor:tipFetchingDescriptor];
+}
+
+
+-(void)filterViewController:(FilterViewController *)filterViewController choosenLeagueName:(NSString *)leageName choosenPredictionName:(NSString *)predictionName {
+    
+    MBProgressHUD* HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:HUD];
+    
+    HUD.labelText = @"Loading...";
+    [HUD show:YES];
+    NSString *path = [[NSString alloc] initWithFormat:@"api/predictions/filter/?predictionName=%@&league=%@", predictionName, leageName];
+    
+    NSString *urlString = [path stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
+    RKObjectMapping *tipsMapping = [RKObjectMapping mappingForClass:[Tip class]];
+    
+    
+    
+    [tipsMapping addAttributeMappingsFromArray:@[@"id", @"leagueType",
+                                                 @"flagURL", @"homeTeam", @"awayTeam", @"isCompleted",
+                                                 @"tipDetail", @"DateTimeCreated",
+                                                 @"isPredictionVerified"]];
+    
+    RKResponseDescriptor *tipFetchingDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:tipsMapping method:RKRequestMethodGET pathPattern:nil keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    
+    [[RKObjectManager sharedManager] addResponseDescriptor:tipFetchingDescriptor];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *authToken = [defaults objectForKey:KEY_USER_AUTH_TOKEN];
+    NSString *email = [defaults objectForKey:KEY_USER_NAME];
+    NSLog(@"%@", email);
+    NSString *basicAuthString = [NSString stringWithFormat:@"Basic %@",authToken];
+    
+    NSDictionary *params = @{@"isPushed":@"True"};
+    
+    
+    //Setting Content-Type: application/json Header, else the api throws 404 NOT Found Error
+    [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_AUTHORIZATON value:basicAuthString];
+    [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_CONTENT_TYPE value:RKMIMETypeJSON];
+    //[[[RKObjectManager sharedManager] HTTPClient] setAuthorizationHeaderWithUsername:email password:pass];
+    
+    NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
+    //RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:urlString parameters:params
+                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  
+                                                  _tips = mappingResult.array;
+                                                  [self.tableView reloadData];
+                                                  [HUD hide:YES];
+                                                  
+                                              } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                  NSLog(@"WTF");
+                                                  [HUD hide:YES];
+                                              }];
+    
+    [[RKObjectManager sharedManager] removeResponseDescriptor:tipFetchingDescriptor];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 @end

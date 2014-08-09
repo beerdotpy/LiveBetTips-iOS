@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString* email;
 @property (nonatomic, strong) NSString* username;
 @property (nonatomic, strong) NSString* authToken;
+@property (nonatomic, strong) NSNumber* usercredit;
 
 @end

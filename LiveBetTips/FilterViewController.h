@@ -10,9 +10,15 @@
 
 @protocol FilterViewControllerDelegate;
 
-@interface FilterViewController : UIViewController
-
-@property (nonatomic, weak) id<FilterViewControllerDelegate> delegate;
+@interface FilterViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate> {
+    
+    IBOutlet UIPickerView *leagueNamePicker;
+    
+    IBOutlet UIPickerView *predictionNamePicker;
+    
+    id<FilterViewControllerDelegate> delegate;
+}
+@property (nonatomic, strong) id delegate;
 @property (nonatomic, strong) NSArray *leagueTypes;
 @property (nonatomic, strong) NSArray *predictionNames;
 

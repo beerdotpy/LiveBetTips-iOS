@@ -12,7 +12,7 @@
 #import "User.h"
 #import <Toast+UIView.h>
 #import "UIViewController+AMSlideMenu.h"
-
+#import <MBProgressHUD/MBProgressHUD.h>
 @interface LoginViewController ()
 
 @property RKResponseDescriptor *loginResponseDescriptor;
@@ -90,7 +90,7 @@
     
     //setup object mappings
     RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[User class]];
-    [userMapping addAttributeMappingsFromArray:@[KEY_USER_ID,KEY_USER_NAME, KEY_USER_AUTH_TOKEN]];
+    [userMapping addAttributeMappingsFromArray:@[KEY_USER_ID,KEY_USER_NAME, KEY_USER_AUTH_TOKEN, @"usercredit"]];
     
      _loginResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping method:RKRequestMethodPOST pathPattern:nil keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
@@ -123,6 +123,12 @@
         [uiAlertView show];
         
     } else {
+        MBProgressHUD* HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
+        
+        HUD.labelText = @"Loading...";
+        [HUD show:YES];
+        
         //Construct Dictionary Here
         loginRequestData = @{KEY_EMAIL:email,
                              KEY_PASSWORD:password,
@@ -150,11 +156,12 @@
                                                 [self notifyUserWithLogin:@"Logged In Successfully"];
                                                 [_objectManager removeResponseDescriptor:_loginResponseDescriptor];
                                                 //[self performSegueWithIdentifier:@"loginToTipsSegue" sender:sender];
-                                                
+                                                [HUD hide:YES];
                                                 [self.mainSlideMenu.leftMenu performSegueWithIdentifier:@"tipsSegue" sender:sender];
                                                 
                                             }
                                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                [HUD hide:YES];
                                                 [self notifyUserWithLogin:@"Email/Password Invalid, Please Try Again"];
                                             }
          ];
@@ -186,7 +193,7 @@
     [defaults setObject:email forKey:KEY_USER_NAME];
     [defaults setObject:user.authToken forKey:KEY_USER_AUTH_TOKEN];
     [defaults setObject:boolean forKey:@"loggedIn"];
-    
+    [defaults setObject:user.usercredit forKey:@"usercredit"];
     [defaults synchronize];
     
     NSLog(@"Data Saved Successfully");

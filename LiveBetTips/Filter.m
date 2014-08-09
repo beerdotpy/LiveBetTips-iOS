@@ -10,4 +10,8 @@
 
 @implementation Filter
 
+@synthesize units;
+@synthesize predictionName;
+@synthesize leagueType;
+
 @end

@@ -65,8 +65,11 @@
             break;
         case 7:
             //Buy Tips
-            identifier = @"loginSegue";
-
+            if ([[defaults objectForKey:@"loggedIn"] isEqualToString:@"YES"]) {
+                identifier = @"buyTipsSegue";
+            } else {
+                identifier = @"loginSegue";
+            }
             break;
     }
     
@@ -80,7 +83,7 @@
     frame.size = (CGSize){40,40};
     button.frame = frame;
     
-    [button setImage:[UIImage imageNamed:@"icon"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"menuicon"] forState:UIControlStateNormal];
 }
 
 

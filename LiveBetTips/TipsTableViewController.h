@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface TipsTableViewController : UITableViewController
+#import "FilterViewController.h"
+
+@interface TipsTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, FilterViewControllerDelegate>
 
 @property NSArray *tips;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) id <FilterViewControllerDelegate> delegate;
+@property (strong, nonatomic) IBOutlet UILabel *creditsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *unitsLabel;
 
 @end

@@ -14,5 +14,5 @@
 @synthesize username;
 @synthesize authToken;
 @synthesize email;
-
+@synthesize usercredit;
 @end

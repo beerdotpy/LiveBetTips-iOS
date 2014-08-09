@@ -10,6 +10,7 @@
 
 @interface Filter : NSObject
 
+@property (nonatomic, strong) NSString *units;
 @property (nonatomic, strong) NSArray *predictionName;
 @property (nonatomic, strong) NSArray *leagueType;
 
