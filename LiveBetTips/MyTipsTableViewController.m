@@ -75,7 +75,7 @@ int rowNumber;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    NSLog(@"%d Sender Id = ", [sender tag]);
+    NSLog(@"%ld Sender Id = ", (long)[sender tag]);
     
     if ([sender tag] == 1001) {
         

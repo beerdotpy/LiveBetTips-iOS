@@ -1,0 +1,201 @@
+
+/* Class = "IBUIButton"; normalTitle = "Apply Filters"; ObjectID = "1Ke-jo-7m4"; */
+"1Ke-jo-7m4.normalTitle" = "Apply Filters";
+
+/* Class = "IBUILabel"; text = "REGISTER"; ObjectID = "2H6-fk-3ye"; */
+"2H6-fk-3ye.text" = "REGISTER";
+
+/* Class = "IBUILabel"; text = "Home Team"; ObjectID = "3AD-am-9P8"; */
+"3AD-am-9P8.text" = "Home Team";
+
+/* Class = "IBUIViewController"; title = "Register"; ObjectID = "3by-X7-v6Z"; */
+"3by-X7-v6Z.title" = "Register";
+
+/* Class = "IBUITextField"; text = "Message"; ObjectID = "3ns-om-c8b"; */
+"3ns-om-c8b.text" = "Message";
+
+/* Class = "IBUINavigationItem"; title = "Prediction Detail"; ObjectID = "4Vq-XD-pDw"; */
+"4Vq-XD-pDw.title" = "Prediction Detail";
+
+/* Class = "IBUILabel"; text = "Away Team"; ObjectID = "5lU-Pg-cEW"; */
+"5lU-Pg-cEW.text" = "Away Team";
+
+/* Class = "IBUILabel"; text = "LOGIN"; ObjectID = "60J-tX-A2e"; */
+"60J-tX-A2e.text" = "LOGIN";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "6Ni-Ml-Mw7"; */
+"6Ni-Ml-Mw7.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Prediction Name"; ObjectID = "83i-hU-SyY"; */
+"83i-hU-SyY.text" = "Prediction Name";
+
+/* Class = "IBUILabel"; text = "Password"; ObjectID = "8j5-HL-sJm"; */
+"8j5-HL-sJm.text" = "Password";
+
+/* Class = "IBUINavigationItem"; title = "My Tips"; ObjectID = "9vK-Vz-UCg"; */
+"9vK-Vz-UCg.title" = "My Tips";
+
+/* Class = "IBUINavigationItem"; title = "Buy Credits"; ObjectID = "BgC-F7-eED"; */
+"BgC-F7-eED.title" = "Buy Credits";
+
+/* Class = "IBUILabel"; text = "CONTACT US"; ObjectID = "CVw-a2-kcM"; */
+"CVw-a2-kcM.text" = "CONTACT US";
+
+/* Class = "IBUILabel"; text = "INFO"; ObjectID = "Df3-G0-mHE"; */
+"Df3-G0-mHE.text" = "INFO";
+
+/* Class = "IBUILabel"; text = "Verified"; ObjectID = "EFn-zM-fJs"; */
+"EFn-zM-fJs.text" = "Verified";
+
+/* Class = "IBUILabel"; text = "Date"; ObjectID = "Eu5-EB-RgP"; */
+"Eu5-EB-RgP.text" = "Date";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "Fpm-ef-oab"; */
+"Fpm-ef-oab.title" = "Back";
+
+/* Class = "IBUINavigationItem"; title = "Register"; ObjectID = "I9N-9w-deG"; */
+"I9N-9w-deG.title" = "Register";
+
+/* Class = "IBUILabel"; text = "Away Team"; ObjectID = "IM4-jd-tLw"; */
+"IM4-jd-tLw.text" = "Away Team";
+
+/* Class = "IBUILabel"; text = "Email"; ObjectID = "ISt-Cf-LPW"; */
+"ISt-Cf-LPW.text" = "Email";
+
+/* Class = "IBUILabel"; text = "Date"; ObjectID = "J07-sJ-BZy"; */
+"J07-sJ-BZy.text" = "Date";
+
+/* Class = "IBUIButton"; normalTitle = "Forgot Password?"; ObjectID = "L2y-d2-TDf"; */
+"L2y-d2-TDf.normalTitle" = "Forgot Password?";
+
+/* Class = "IBUILabel"; text = "League Name"; ObjectID = "LS0-lG-AGd"; */
+"LS0-lG-AGd.text" = "League Name";
+
+/* Class = "IBUITextField"; placeholder = "password"; ObjectID = "NKa-SS-8s4"; */
+"NKa-SS-8s4.placeholder" = "password";
+
+/* Class = "IBUILabel"; text = "Flag"; ObjectID = "NPV-Sy-wjV"; */
+"NPV-Sy-wjV.text" = "Flag";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Qcy-YJ-GWC"; */
+"Qcy-YJ-GWC.text" = "Label";
+
+/* Class = "IBUINavigationItem"; title = "Tips"; ObjectID = "RaN-yw-mVX"; */
+"RaN-yw-mVX.title" = "Tips";
+
+/* Class = "IBUIBarButtonItem"; title = "Terms"; ObjectID = "Rbf-ib-FRw"; */
+"Rbf-ib-FRw.title" = "Terms";
+
+/* Class = "IBUILabel"; text = "Flag"; ObjectID = "TKy-OA-IJY"; */
+"TKy-OA-IJY.text" = "Flag";
+
+/* Class = "IBUIButton"; normalTitle = "Send"; ObjectID = "TLU-kC-e6Z"; */
+"TLU-kC-e6Z.normalTitle" = "Send";
+
+/* Class = "IBUIButton"; normalTitle = "Buy 1 Credit"; ObjectID = "TQk-1y-EFs"; */
+"TQk-1y-EFs.normalTitle" = "Buy 1 Credit";
+
+/* Class = "IBUITextField"; placeholder = "you@somedomain.com"; ObjectID = "VPX-Uc-U0v"; */
+"VPX-Uc-U0v.placeholder" = "you@somedomain.com";
+
+/* Class = "IBUIButton"; normalTitle = "Filter Tips"; ObjectID = "VQD-cL-4wL"; */
+"VQD-cL-4wL.normalTitle" = "Filter Tips";
+
+/* Class = "IBUIButton"; normalTitle = "Sign Up"; ObjectID = "WNl-wc-MgF"; */
+"WNl-wc-MgF.normalTitle" = "Sign Up";
+
+/* Class = "IBUILabel"; text = "TIPS"; ObjectID = "WgK-XQ-10e"; */
+"WgK-XQ-10e.text" = "TIPS";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Wrb-oD-c3t"; */
+"Wrb-oD-c3t.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Credits : 00"; ObjectID = "X8f-ut-Pfb"; */
+"X8f-ut-Pfb.text" = "Credits : 00";
+
+/* Class = "IBUILabel"; text = "Units : 00"; ObjectID = "bK0-Rg-tMc"; */
+"bK0-Rg-tMc.text" = "Units : 00";
+
+/* Class = "IBUILabel"; text = "Confirm Password"; ObjectID = "bPF-bH-d73"; */
+"bPF-bH-d73.text" = "Confirm Password";
+
+/* Class = "IBUILabel"; text = ">"; ObjectID = "cMu-G2-QzC"; */
+"cMu-G2-QzC.text" = ">";
+
+/* Class = "IBUIButton"; normalTitle = "Buy 5 Credits"; ObjectID = "cQr-d2-WEi"; */
+"cQr-d2-WEi.normalTitle" = "Buy 5 Credits";
+
+/* Class = "IBUILabel"; text = "TIP"; ObjectID = "d1C-eB-kk6"; */
+"d1C-eB-kk6.text" = "TIP";
+
+/* Class = "IBUILabel"; text = "League Type"; ObjectID = "d1w-Rh-chk"; */
+"d1w-Rh-chk.text" = "League Type";
+
+/* Class = "IBUILabel"; text = "League Name"; ObjectID = "dE5-NZ-lIL"; */
+"dE5-NZ-lIL.text" = "League Name";
+
+/* Class = "IBUIButton"; normalTitle = "Reset Password"; ObjectID = "fBN-W2-juH"; */
+"fBN-W2-juH.normalTitle" = "Reset Password";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "fOK-ji-tSt"; */
+"fOK-ji-tSt.title" = "Back";
+
+/* Class = "IBUILabel"; text = "MY TIPS"; ObjectID = "fy5-t1-Mzn"; */
+"fy5-t1-Mzn.text" = "MY TIPS";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "gF5-nJ-Dwc"; */
+"gF5-nJ-Dwc.title" = "Back";
+
+/* Class = "IBUILabel"; text = "Credits : 00"; ObjectID = "hNP-bi-uMO"; */
+"hNP-bi-uMO.text" = "Credits : 00";
+
+/* Class = "IBUINavigationItem"; title = "Filters"; ObjectID = "is3-RT-4hS"; */
+"is3-RT-4hS.title" = "Filters";
+
+/* Class = "IBUITextView"; text = "Detail Message"; ObjectID = "jcZ-F2-v7X"; */
+"jcZ-F2-v7X.text" = "Detail Message";
+
+/* Class = "IBUILabel"; text = ">"; ObjectID = "jhc-DZ-Y5x"; */
+"jhc-DZ-Y5x.text" = ">";
+
+/* Class = "IBUITextField"; placeholder = "enter your email "; ObjectID = "lEa-6K-no4"; */
+"lEa-6K-no4.placeholder" = "enter your email ";
+
+/* Class = "IBUILabel"; text = "Verified"; ObjectID = "oDq-ga-hOc"; */
+"oDq-ga-hOc.text" = "Verified";
+
+/* Class = "IBUILabel"; text = "TIP"; ObjectID = "pFG-Ua-JJh"; */
+"pFG-Ua-JJh.text" = "TIP";
+
+/* Class = "IBUITextField"; placeholder = "Subject"; ObjectID = "qqv-rI-bHF"; */
+"qqv-rI-bHF.placeholder" = "Subject";
+
+/* Class = "IBUITextField"; text = "Subject"; ObjectID = "qqv-rI-bHF"; */
+"qqv-rI-bHF.text" = "Subject";
+
+/* Class = "IBUIButton"; normalTitle = "Filter Tips"; ObjectID = "r5i-1B-eTz"; */
+"r5i-1B-eTz.normalTitle" = "Filter Tips";
+
+/* Class = "IBUIButton"; normalTitle = "Sign Up"; ObjectID = "ry8-Sa-5ME"; */
+"ry8-Sa-5ME.normalTitle" = "Sign Up";
+
+/* Class = "IBUINavigationItem"; title = "Contact Us"; ObjectID = "ss3-2z-H6z"; */
+"ss3-2z-H6z.title" = "Contact Us";
+
+/* Class = "IBUIButton"; normalTitle = "Login"; ObjectID = "tfs-hk-KGf"; */
+"tfs-hk-KGf.normalTitle" = "Login";
+
+/* Class = "IBUILabel"; text = "Home Team"; ObjectID = "ubb-eE-NWm"; */
+"ubb-eE-NWm.text" = "Home Team";
+
+/* Class = "IBUIViewController"; title = "Login"; ObjectID = "vXZ-lx-hvc"; */
+"vXZ-lx-hvc.title" = "Login";
+
+/* Class = "IBUINavigationItem"; title = "Forgot Password"; ObjectID = "wA9-x4-xlH"; */
+"wA9-x4-xlH.title" = "Forgot Password";
+
+/* Class = "IBUILabel"; text = "BUY TIPS"; ObjectID = "xJo-ST-NbE"; */
+"xJo-ST-NbE.text" = "BUY TIPS";
+
+/* Class = "IBUINavigationItem"; title = "Login"; ObjectID = "y73-6s-T7c"; */
+"y73-6s-T7c.title" = "Login";

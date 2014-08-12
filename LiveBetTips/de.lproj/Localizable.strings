@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  LiveBetTips
+
+  Created by Ishan Khanna on 09/08/14.
+  Copyright (c) 2014 Ishan Khanna. All rights reserved.
+*/
+"back" = "Rückseite";
+"contact_us" = "treten Sie mit uns in Verbindung";
+"subject" = "Thema";
+"your_message" = "Ihre Meldung";
+"send" = "schicken (Sie)";
+"apply" = "treffen Sie zu";
+"filters" = "die Filter";
+"credits" = "Gutschriften";
+"login" = "logon";
+"email" = "die E-Mail";
+"password" = "Kennwort";
+"forgot_my_password" =  "Ich habe mein Kennwort vergessen";
+"my_tips" = "meine Tips";
+"info" = "Informationen";
+"register" = "register";
+"buy_tips" = "Tips kaufen";
+"accept" = "annehmen";
+"agree" = "stimmen Sie";
+"terms" = "Bezeichnungen";
+"home_team" = "Hauptteam";
+"away_team" = "Wegteam";
+"match_info" = "Übereinstimmung Info";
+"comments" = "Kommentar";
+"sign_up"= "register";
+

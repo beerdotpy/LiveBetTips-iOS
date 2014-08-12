@@ -57,6 +57,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"I am here now");
+
+    [_bt_login setTitle:NSLocalizedString(@"login", nil) forState:UIControlStateNormal];
+    [_bt_signUp setTitle:NSLocalizedString(@"sign_up", nil) forState:UIControlStateNormal];
+    [_bt_forgotPassword setTitle:NSLocalizedString(@"forgot_my_password", nil) forState:UIControlStateNormal];
     
     [self configureRestKit];
 }

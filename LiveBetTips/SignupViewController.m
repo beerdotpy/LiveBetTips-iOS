@@ -12,6 +12,7 @@
 #import "User.h"
 @interface SignupViewController ()
 
+
 @end
 
 @interface NSDictionary (BVJSONString)
@@ -38,6 +39,8 @@
 
 @implementation SignupViewController
 
+BOOL termsAccepted = NO;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -51,6 +54,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [_checkBtn setTitle:@"◻️" forState:UIControlStateNormal];
     
     [self configureRestKit];
 }
@@ -91,7 +96,9 @@
             [self.view makeToast:@"Invalid Email!" duration:1.0 position:@"center"];
             
             return;
-        } else {
+        } else if (!termsAccepted) {
+            [self kickUsersAssForNotFilling:@"Agree To Terms"];
+        }else {
             
             //Everything is valid on client side
             //Time to make a request
@@ -143,6 +150,33 @@
         
         
     }
+}
+
+- (IBAction)termsButtonClicked:(id)sender {
+    
+    
+    [self performSegueWithIdentifier:@"termsSegue" sender:sender];
+    
+    
+}
+
+
+
+
+- (IBAction)checkButtonTapped:(UIButton*)sender {
+    
+    //sender.selected = !sender.selected;    // toggle button's selected state
+    [self.view endEditing:YES];
+    
+    if (!termsAccepted) {
+        [_checkBtn setTitle:@"☑️" forState:UIControlStateNormal];
+        termsAccepted = YES;
+    } else {
+        [_checkBtn setTitle:@"◻️" forState:UIControlStateNormal];
+        termsAccepted = NO;
+    }
+    
+    
 }
 
 - (void) notifyUserWithCreate: (NSString *)response
@@ -202,5 +236,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

@@ -57,7 +57,7 @@
     [_objectManager getObjectsAtPath:@"api/filter/" parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   
-                                                  NSLog(@"Count = %d", [_leagueTypes count]);
+                                                  NSLog(@"Count = %ld", [_leagueTypes count]);
                                                   _leagueTypes = [[mappingResult.array objectAtIndex:0] leagueType];
                                                   _predictionNames = [[mappingResult.array objectAtIndex:0] predictionName];
                                                   

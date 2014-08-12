@@ -10,6 +10,6 @@
 
 @interface ContactUsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *subjectOutlet;
-@property (strong, nonatomic) IBOutlet UITextField *messageOutlet;
+@property (strong, nonatomic) IBOutlet UITextView *messageOutlet;
 
 @end

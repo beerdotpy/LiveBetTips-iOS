@@ -182,6 +182,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2jV-vP-Nzs" kind="custom" identifier="infoSegue" customClass="AMSlideMenuContentSegue" trigger="accessoryAction" id="bmL-Qv-0vF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -201,7 +204,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moJ-aS-NWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-622" y="17"/>
+            <point key="canvasLocation" x="-594" y="37"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wUw-3e-IsT">
@@ -254,7 +257,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfs-hk-KGf">
-                                <rect key="frame" x="223" y="165" width="74" height="30"/>
+                                <rect key="frame" x="110" y="176" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -265,7 +268,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry8-Sa-5ME">
-                                <rect key="frame" x="126" y="332" width="69" height="30"/>
+                                <rect key="frame" x="124" y="269" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -276,7 +279,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2y-d2-TDf">
-                                <rect key="frame" x="20" y="165" width="126" height="30"/>
+                                <rect key="frame" x="62" y="223" width="192" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -289,15 +292,15 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-VB-Bjr">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Login" id="y73-6s-T7c"/>
-                                </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3mu-M7-BNV"/>
+                    <navigationItem key="navigationItem" title="Login" id="3mu-M7-BNV"/>
                     <connections>
+                        <outlet property="bt_forgotPassword" destination="L2y-d2-TDf" id="1EO-ib-OsG"/>
+                        <outlet property="bt_login" destination="tfs-hk-KGf" id="5yz-yP-gIG"/>
+                        <outlet property="bt_signUp" destination="ry8-Sa-5ME" id="gYh-OB-swu"/>
                         <outlet property="tf_email" destination="VPX-Uc-U0v" id="fZN-VF-Hwo"/>
                         <outlet property="tf_password" destination="NKa-SS-8s4" id="cG8-wp-zqc"/>
                         <segue destination="3by-X7-v6Z" kind="push" identifier="loginToSignUpSegue" customClass="ECSlidingSegue" id="Snc-nj-Ubj"/>
@@ -349,7 +352,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLU-kC-e6Z">
-                                <rect key="frame" x="137" y="166" width="46" height="30"/>
+                                <rect key="frame" x="137" y="257" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6729763419" green="0.70762158360000005" blue="0.040031714580000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Send">
@@ -360,20 +363,20 @@
                                     <action selector="sendButtonClicked:" destination="PqT-3l-hy8" eventType="touchUpInside" id="d4E-hg-54z"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Message" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ns-om-c8b">
-                                <rect key="frame" x="20" y="120" width="280" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Message" translatesAutoresizingMaskIntoConstraints="NO" id="S65-CF-E0a">
+                                <rect key="frame" x="20" y="120" width="280" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Us" id="ss3-2z-H6z"/>
                     <connections>
-                        <outlet property="messageOutlet" destination="3ns-om-c8b" id="f0c-2d-CAF"/>
+                        <outlet property="messageOutlet" destination="S65-CF-E0a" id="iYc-XT-ZaG"/>
                         <outlet property="subjectOutlet" destination="qqv-rI-bHF" id="iXo-K4-48O"/>
                     </connections>
                 </viewController>
@@ -394,7 +397,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnW-Sf-E9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="-736"/>
+            <point key="canvasLocation" x="632" y="-703"/>
         </scene>
         <!--My Tips Table View Controller - My Tips-->
         <scene sceneID="soO-qe-lIU">
@@ -547,7 +550,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s26-Pa-bZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="-736"/>
+            <point key="canvasLocation" x="1078" y="-703"/>
         </scene>
         <!--Filter View Controller - Filters-->
         <scene sceneID="7R8-Ps-2xK">
@@ -845,7 +848,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WH4-k9-sPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684" y="672"/>
+            <point key="canvasLocation" x="2096" y="712"/>
+        </scene>
+        <!--View Controller - Terms-->
+        <scene sceneID="hex-jQ-u4o">
+            <objects>
+                <viewController id="zLh-Ju-iGD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zqD-mh-Z2y"/>
+                        <viewControllerLayoutGuide type="bottom" id="hWe-ls-bUz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5bh-HM-uFA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7x-DR-qP5">
+                                <rect key="frame" x="5" y="10" width="310" height="538"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">It is your responsibility to ensure mobile device meets all the necessary technical specifications to enable you to access and use the LiveBetTips app. Apple Applications are only licensed for use on a device owned or controlled by you and using the Apple iPhone OS so you must make sure that you use an appropriate device to access and use any Apple Application.TermsBy accessing LiveBetTips, you are agreeing to be bound by these Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this app. The materials contained in LiveBetTips app are protected by applicable copyright and trade mark law.REGISTRATIONCustomer must be 18 or over years of age to register and engage services with LiveBetTips. During the registration process you will be asked to agree that you are 18 or over years old. If you notice any unauthorised use of your account or any security violation you should notify LiveBetTips. LiveBetTips is not responsible for any damage or loss resulting from non-compliance with this clause. Any false disclosure or misrepresentation by the customer does not rise any claim against LiveBetTips app.Customer securityDuring your registration with LiveBetTips, you select a username (your email address) and a password to activate the service and your account. You are exclusively responsible to keep your password and username confidential and you bear full responsibility for any activity carried out under your username and password. It is your responsibility to immediately contact LiveBetTips in case of any unauthorised use of your personal access data.Our ServiceLiveBetTips provides live advice and predictions (suggestions) for betting or gambling.LIMITATION OF LIABILITYYOU EXPRESSLY UNDERSTAND AND AGREE THAT WE SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSS (EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM OR ARISING OUT OF (I) THE USE OF OR THE INABILITY TO USE THE SERVICE, (II) THE COST TO OBTAIN SUBSTITUTE GOODS AND/OR SERVICES RESULTING FROM ANY TRANSACTION ENTERED INTO ON THROUGH THE SERVICE, (III) UNAUTHORISED ACCESS TO OR ALTERATION OF YOUR DATA TRANSMISSIONS, OR (IV) ANY OTHER MATTER RELATING TO THE SERVICE (V) OR THE USE OF THE APP BY ANY PERSON WITH LIMITED LEGAL CAPACITY. LiveBetTips IS NOT RESPONSIBLE IF A CUSTOMER BECOMES DEPENDED OR ADDICTED TO GAMBLING. LiveBetTips PROVIDES ADVISE AND SUGGESTIONS FOR THE BETTING AND IS NOT RESPONSIBLE FOR ANY FINANCIAL OR ANY OTHER LOSSES INCURRED OUR ADVISE OR SUGGESTIONS IN ANY FORM.Applicable LawYou agree that this Terms of Use and any dispute arising out of your use of the LiveBetTips app or our products or services shall be governed by and construed in accordance with local laws where the headquarters of the owner of the LiveBetTips app is located, without regard to its conflict of law provisions. By registering or using the LiveBetTips app and service you consent and submit to the exclusive jurisdiction and venue of the county or city where the headquarters of the owner of the LiveBetTips app is located.PaymentIn order to access betting predictions you should have credits. Credits are available for purchase through Apple's in app purchases. There are two products to buy through in app purchases. The product of one (1) credit and the product of five (5) credits. Every prediction costs one credit. The way of payment may be altered by LiveBetTips which will be announced to the customers before the purchase of the credits.DisclaimerLiveBetTips does not guarantee winnings and cannot be held liable for losses resulting from the use of predictions (suggestions) obtained from its app.Betting can be very risky and users should only speculate with money that they can comfortably afford to lose and should ensure that the risks involved are fully understood, seeking advice if necessary.LiveBetTips is not  responsible for the losses resulting from the use of predictions (suggestions) obtained from its app and will NOT refund such losses.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Terms" id="E7Z-Gm-N7j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1S-cE-4tY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="729"/>
         </scene>
         <!--Tip Detail View Controller - Prediction Detail-->
         <scene sceneID="oOt-b1-ffY">
@@ -925,7 +957,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEJ-uQ-QsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="724"/>
+            <point key="canvasLocation" x="-1112" y="712"/>
         </scene>
         <!--But Tips View Controller - Buy Credits-->
         <scene sceneID="KnO-UL-ddh">
@@ -972,7 +1004,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPB-5s-aaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="740"/>
+            <point key="canvasLocation" x="-630" y="744"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="San-5j-UXx">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="2jV-vP-Nzs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8VE-al-HtC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PKz-RS-WP4" kind="relationship" relationship="rootViewController" id="koB-oS-fPg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPb-c5-Twg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="1427"/>
+        </scene>
+        <!--View Controller - Information-->
+        <scene sceneID="zCA-k4-AHz">
+            <objects>
+                <viewController id="PKz-RS-WP4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wht-9q-tEc"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLx-QZ-JCi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ejb-Cb-Otp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUP-CD-ga9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">Live Betting is a category of betting, which yields big profits as well as the opportunity to ‘cover’ your bet.The occupation with this category of betting demands devoting a lot of time for the study of the games before they begin and also for their observation.Strategy, discipline, time and knowledge of betting and statistics are required for the study of games.Our team watches the games we have chosen live and in combination with the use of statistics makes predictions and proposes to you the final result of the game.We take advantage of the yield’s great variations during a football match to our profit.All of our customers will receive our predictions in their mobiles live.The only thing you have to do is place your bet.What is also important is the following strategy that we follow and suggest:-Betting always the same amount of money (Flat Bet). We choose this way of betting because it is certain that there will be a series of successful as well as ineffective results. We want to protect our capital and increase our profits, too.-We always play odd matches for the same reason as mentioned above.-When our bet is confirmed, we cover it almost always because this way we earn some 4-7 % more.-All the bets we choose are played between the 45th and 70th minute of the match which is its culmination.------What is a prediction?This is our philosophy on what constitutes ‘predictionFor us, betting in football matches is a matter of statistics. We use our long experience mainly guided by statistics.  ------What is the cover of betting?During a match we choose an outcome according to our predictions. If our predictions are not confirmed in any point of the game, then the betting is lost. On the contrary, if our prediction is confirmed before the end of the match, we have the chance not to lose the invested capital. The way to achieve this is to bet at the other two outcomes of the match with such a sum of money so as not to lose if, at the end of the match, our first prediction is not confirmed. EXAMPLE:Cover on a home win. Let’s say that we are playing a home win that starts the match with odds of 1,80 , and bet 100 units .At the 60 minute,( were we usually give our predictions),we have a draw .The price at this point of the game ( without any red card ) is about 2,50 – 2,70.If a goal is scored for the home team at that time or later , the price is going down to 1,10 – 1,30 . This is the time we cover our bet, by laying home win (if we play at bet exchanges), or bet on draw and away win if (we play on conventional bookmakers).In both of the above situations we cover our bets to protect our investment of 100 units. But why do we do this? The answer to this question is based on statistics. Analysis of 2500+ matches has shown that at the last 10 minutes +2 or 3 minutes of stoppage time, (after the 80 minute of the match), about 30% of the matches go from home win to draw or away win. Without covering our bets we would have a profit of 820 units every 10 matches [2, 60 x 70% = 1820 – 1000(10x100) = 820).With coverage [2, 40(2, 60-0, 20) x70% = 1680 – 1000 = 680 +300 (the 3 bets we DID NOT LOSE) = 980. THAT IS A DIFFERENCE OF 16% MORE PROFIT, JUST BY COVERING OUR MATCHES. If the goal is scored at the very last minutes of a match, we can cover our bets with the same amount, and make a profit, whatever the outcome of the match. That makes our profit even higher.We can do similar covers on our bets, on OVER, UNDER, HOME WIN OR DRAW, AWAY WIN OR DRAW, AWAY WIN, DRAW etc. This is the advantage of Live Bet: you have the time to avoid matches that don’t go the way you want, avoid betting on matches with in play injuries, red cards etc, and when you do bet on matches have the luxury of covering your investment (not losing your capital), and if in the last minutes of the match, make a profit on any outcome of the match.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Information" id="eZx-ny-cVN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBR-l2-cDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="1435"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MOV-Xe-9SN">
@@ -1012,73 +1088,111 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_HDPI.png" translatesAutoresizingMaskIntoConstraints="NO" id="ppk-5S-5DS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-o7-Sn2">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-Cf-LPW">
-                                <rect key="frame" x="20" y="96" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="294-lG-oxU">
-                                <rect key="frame" x="20" y="120" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j5-HL-sJm">
-                                <rect key="frame" x="20" y="167" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2G8-Fp-X4G">
-                                <rect key="frame" x="20" y="189" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-wc-MgF">
-                                <rect key="frame" x="133" y="299" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="signUpButtonClicked:" destination="3by-X7-v6Z" eventType="touchUpInside" id="at3-Yc-RdL"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPF-bH-d73">
-                                <rect key="frame" x="20" y="232" width="142" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q5J-Pa-dTM">
-                                <rect key="frame" x="20" y="261" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_HDPI.png" translatesAutoresizingMaskIntoConstraints="NO" id="ppk-5S-5DS">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="800"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-Cf-LPW">
+                                        <rect key="frame" x="20" y="9" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="294-lG-oxU">
+                                        <rect key="frame" x="20" y="33" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j5-HL-sJm">
+                                        <rect key="frame" x="20" y="64" width="76" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2G8-Fp-X4G">
+                                        <rect key="frame" x="20" y="152" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-wc-MgF">
+                                        <rect key="frame" x="127" y="253" width="55" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpButtonClicked:" destination="3by-X7-v6Z" eventType="touchUpInside" id="at3-Yc-RdL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPF-bH-d73">
+                                        <rect key="frame" x="20" y="124" width="142" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q5J-Pa-dTM">
+                                        <rect key="frame" x="20" y="86" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18x-Yx-i0G">
+                                        <rect key="frame" x="20" y="223" width="54" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                        <state key="normal" title="☑️">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkButtonTapped:" destination="3by-X7-v6Z" eventType="touchUpInside" id="0J0-1B-y8v"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I have read and agree to terms." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzb-Ju-FDs">
+                                        <rect key="frame" x="73" y="227" width="213" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNy-Of-Ras">
+                                        <rect key="frame" x="91" y="190" width="138" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Terms of Agreement">
+                                            <color key="titleColor" red="0.729411780834198" green="0.93725496530532837" blue="0.92549026012420654" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="termsButtonClicked:" destination="3by-X7-v6Z" eventType="touchUpInside" id="eaW-i3-8d1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="UTu-Pf-1T0"/>
                     <connections>
+                        <outlet property="checkBtn" destination="18x-Yx-i0G" id="Y2I-PT-OMQ"/>
                         <outlet property="confirmPasswordTextField" destination="q5J-Pa-dTM" id="uTm-zl-oTQ"/>
                         <outlet property="emailTextField" destination="294-lG-oxU" id="Ldp-0V-l5f"/>
                         <outlet property="passwordTextField" destination="2G8-Fp-X4G" id="X1v-5i-oI4"/>
+                        <segue destination="zLh-Ju-iGD" kind="push" identifier="termsSegue" id="Gio-BM-arD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT4-f0-wkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165" y="694"/>
+            <point key="canvasLocation" x="1113" y="687"/>
         </scene>
     </scenes>
     <resources>
@@ -1091,8 +1205,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pef-6m-EAO"/>
-        <segue reference="Snc-nj-Ubj"/>
+        <segue reference="KVJ-Yz-AEq"/>
+        <segue reference="m1E-mQ-qbD"/>
         <segue reference="9JU-u1-9gB"/>
         <segue reference="8Sm-z6-vay"/>
     </inferredMetricsTieBreakers>

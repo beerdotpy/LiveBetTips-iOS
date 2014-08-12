@@ -52,7 +52,7 @@
             break;
         case 4:
             //Info
-            identifier = @"loginSegue";
+            identifier = @"infoSegue";
             break;
         case 5:
             //Login

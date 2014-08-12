@@ -13,7 +13,11 @@
 #import "TipDetailViewController.h"
 #import "UIViewController+AMSlideMenu.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "Filter.h"
 @interface TipsTableViewController ()
+
+@property RKObjectManager *objectManager;
+@property RKResponseDescriptor *loginResponseDescriptor;
 
 @end
 
@@ -27,8 +31,8 @@ int rowNumber;
     [super viewDidLoad];
     
     _creditsLabel.text = [[NSString alloc] initWithFormat:@"Credits : %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"usercredit"]];
-    
-    
+    [self configureRestKitForUnits];
+    [self fetchUnits];
     [self loadTips];
     
     
@@ -67,6 +71,7 @@ int rowNumber;
     Tip *tip = _tips[indexPath.row];
     
     cell.leagueNameLabel.text = tip.leagueType;
+    [cell.leagueNameLabel sizeToFit];
     cell.homeTeamLabel.text = tip.homeTeam;
     cell.awayTeamLabel.text = tip.awayTeam;
     cell.isVerifiedLabel.text = tip.isPredictionVerified;
@@ -213,6 +218,45 @@ int rowNumber;
                                               }];
     
     [[RKObjectManager sharedManager] removeResponseDescriptor:tipFetchingDescriptor];
+}
+
+- (void) configureRestKitForUnits
+{
+    
+    NSURL *baseURL = [NSURL URLWithString:BASE_URL];
+    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    //initialize RestKit
+    _objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    
+    //setup object mappings
+    
+    RKObjectMapping *pnMappting = [RKObjectMapping mappingForClass:[Filter class]];
+    [pnMappting addAttributeMappingsFromArray:@[@"predictionName", @"leagueType",@"units"]];
+    
+    _loginResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:pnMappting method:RKRequestMethodGET pathPattern:nil keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    
+    [_objectManager addResponseDescriptor:_loginResponseDescriptor];
+    
+}
+
+-(void)fetchUnits{
+    
+    
+    //    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    
+    
+    [_objectManager getObjectsAtPath:@"api/filter/" parameters:nil
+                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                 _unitsLabel.text = [[NSString alloc] initWithFormat:@"Units : %@",
+                                 [[mappingResult.array objectAtIndex:0] units]];
+                                 [_unitsLabel sizeToFit];
+                             } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                 NSLog(@"WTF");
+                             }];
+    
+    
+    
 }
 
 -(void)filterViewController:(FilterViewController *)filterViewController choosenLeagueName:(NSString *)leageName choosenPredictionName:(NSString *)predictionName {
