@@ -83,7 +83,7 @@
     frame.size = (CGSize){40,40};
     button.frame = frame;
     
-    [button setImage:[UIImage imageNamed:@"menuicon"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"slideMenuIcon"] forState:UIControlStateNormal];
 }
 
 

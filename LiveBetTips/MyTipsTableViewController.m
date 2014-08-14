@@ -34,6 +34,9 @@ int rowNumber;
 {
     [super viewDidLoad];
     
+    UIColor *oil = [[UIColor alloc] initWithRed:112.0/255.0 green:109.0/255.0 blue:42.0/255.0 alpha:1];
+    [self.navigationController.navigationBar setBarTintColor:oil];
+    
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"usercredit"] == NULL) {
         _creditsLabel.text = [[NSString alloc] initWithFormat:@"Credits : %@", @"0"];
     } else {
