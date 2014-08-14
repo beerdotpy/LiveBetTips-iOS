@@ -46,7 +46,7 @@
         <scene sceneID="bWy-V4-zAD">
             <objects>
                 <tableViewController id="vqL-NO-awG" customClass="AMSlideMenuLeftTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rVO-s0-7Ex">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rVO-s0-7Ex">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,11 +57,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="Cu6-Fb-qbR" id="X26-kl-w8h">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="XI9-A1-Pxb">
-                                                    <rect key="frame" x="0.0" y="-13" width="250" height="273"/>
+                                                    <rect key="frame" x="0.0" y="-13" width="250" height="274"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -71,17 +71,19 @@
                                         <rect key="frame" x="0.0" y="261" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iuu-zn-E4L" id="paa-c9-eR3">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MY TIPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-t1-Mzn">
                                                     <rect key="frame" x="20" y="11" width="68" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.6729763419" green="0.70762158360000005" blue="0.040031714580000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="b06-z0-Gha" kind="custom" identifier="contactUsSegue" customClass="AMSlideMenuContentSegue" trigger="accessoryAction" id="51v-3C-ZAD"/>
                                         </connections>
@@ -90,98 +92,109 @@
                                         <rect key="frame" x="0.0" y="305" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dbw-bR-fdN" id="8vz-z1-9ng">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgK-XQ-10e">
                                                     <rect key="frame" x="20" y="11" width="37" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hxm-2W-4cY">
                                         <rect key="frame" x="0.0" y="349" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hxm-2W-4cY" id="fSM-yF-aha">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONTACT US" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVw-a2-kcM">
                                                     <rect key="frame" x="20" y="11" width="108" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.6729763419" green="0.70762158360000005" blue="0.040031714580000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Fdh-6b-A2H">
                                         <rect key="frame" x="0.0" y="393" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fdh-6b-A2H" id="DMu-Gy-RBy">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INFO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df3-G0-mHE">
                                                     <rect key="frame" x="20" y="11" width="40" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DGq-Sx-F40">
                                         <rect key="frame" x="0.0" y="437" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DGq-Sx-F40" id="mFX-YO-tfy">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60J-tX-A2e">
                                                     <rect key="frame" x="20" y="11" width="53" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.6729763419" green="0.70762158360000005" blue="0.040031714580000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CJO-oT-wQj">
                                         <rect key="frame" x="0.0" y="481" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CJO-oT-wQj" id="XiV-mG-48R">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REGISTER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2H6-fk-3ye">
                                                     <rect key="frame" x="20" y="11" width="83" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="akL-z7-8Zm">
                                         <rect key="frame" x="0.0" y="525" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="akL-z7-8Zm" id="1Xu-si-TsL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUY TIPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJo-ST-NbE">
                                                     <rect key="frame" x="20" y="11" width="77" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.6729763419" green="0.70762158360000005" blue="0.040031714580000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="2jV-vP-Nzs" kind="custom" identifier="infoSegue" customClass="AMSlideMenuContentSegue" trigger="accessoryAction" id="bmL-Qv-0vF"/>
                                         </connections>
@@ -212,6 +225,7 @@
                 <navigationController definesPresentationContext="YES" id="dZx-BB-pka" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yBP-1C-d4b">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.42352944609999998" green="0.43921571970000001" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="PAw-yP-wpR"/>
@@ -234,7 +248,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_HDPI.png" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-pD-k7x">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="57" width="480" height="800"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="you@somedomain.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPX-Uc-U0v">
@@ -310,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="17"/>
+            <point key="canvasLocation" x="507" y="17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nEt-O2-lLt">
@@ -318,6 +332,7 @@
                 <navigationController definesPresentationContext="YES" id="b06-z0-Gha" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aoP-Hb-s2t">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.42352944609999998" green="0.43921571970000001" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="PqT-3l-hy8" kind="relationship" relationship="rootViewController" id="PJe-sg-amU"/>
@@ -460,13 +475,10 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.43529415129999999" green="0.42352944609999998" blue="0.16078431900000001" alpha="1" colorSpace="deviceRGB"/>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPV-Sy-wjV">
-                                            <rect key="frame" x="20" y="6" width="33" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9AB-61-Kxy">
+                                            <rect key="frame" x="10" y="7" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J07-sJ-BZy">
                                             <rect key="frame" x="262" y="6" width="36" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -671,23 +683,20 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="7Rm-o1-yxl">
+                                                            <rect key="frame" x="10" y="10" width="32" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="73" translatesAutoresizingMaskIntoConstraints="NO" id="Eu5-EB-RgP">
+                                                            <rect key="frame" x="235" y="0.0" width="73" height="36"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.43529415130615234" green="0.42352944612503052" blue="0.16078431904315948" alpha="1" colorSpace="deviceRGB"/>
                                                 </view>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKy-OA-IJY">
-                                                    <rect key="frame" x="20" y="6" width="33" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eu5-EB-RgP">
-                                                    <rect key="frame" x="262" y="6" width="36" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9A-No-3UJ" userLabel="Home Team Background" colorLabel="IBBuiltInLabel-Yellow">
                                                     <rect key="frame" x="0.0" y="37" width="160" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -768,20 +777,20 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UcH-W2-q31">
-                                <rect key="frame" x="0.0" y="64" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="61" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits : 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8f-ut-Pfb">
-                                        <rect key="frame" x="20" y="12" width="106" height="21"/>
+                                        <rect key="frame" x="20" y="12" width="87" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Units : 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-Rg-tMc">
-                                        <rect key="frame" x="208" y="12" width="92" height="21"/>
+                                        <rect key="frame" x="115" y="12" width="185" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -866,7 +875,41 @@
                                 <rect key="frame" x="5" y="10" width="310" height="538"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">It is your responsibility to ensure mobile device meets all the necessary technical specifications to enable you to access and use the LiveBetTips app. Apple Applications are only licensed for use on a device owned or controlled by you and using the Apple iPhone OS so you must make sure that you use an appropriate device to access and use any Apple Application.TermsBy accessing LiveBetTips, you are agreeing to be bound by these Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this app. The materials contained in LiveBetTips app are protected by applicable copyright and trade mark law.REGISTRATIONCustomer must be 18 or over years of age to register and engage services with LiveBetTips. During the registration process you will be asked to agree that you are 18 or over years old. If you notice any unauthorised use of your account or any security violation you should notify LiveBetTips. LiveBetTips is not responsible for any damage or loss resulting from non-compliance with this clause. Any false disclosure or misrepresentation by the customer does not rise any claim against LiveBetTips app.Customer securityDuring your registration with LiveBetTips, you select a username (your email address) and a password to activate the service and your account. You are exclusively responsible to keep your password and username confidential and you bear full responsibility for any activity carried out under your username and password. It is your responsibility to immediately contact LiveBetTips in case of any unauthorised use of your personal access data.Our ServiceLiveBetTips provides live advice and predictions (suggestions) for betting or gambling.LIMITATION OF LIABILITYYOU EXPRESSLY UNDERSTAND AND AGREE THAT WE SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSS (EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM OR ARISING OUT OF (I) THE USE OF OR THE INABILITY TO USE THE SERVICE, (II) THE COST TO OBTAIN SUBSTITUTE GOODS AND/OR SERVICES RESULTING FROM ANY TRANSACTION ENTERED INTO ON THROUGH THE SERVICE, (III) UNAUTHORISED ACCESS TO OR ALTERATION OF YOUR DATA TRANSMISSIONS, OR (IV) ANY OTHER MATTER RELATING TO THE SERVICE (V) OR THE USE OF THE APP BY ANY PERSON WITH LIMITED LEGAL CAPACITY. LiveBetTips IS NOT RESPONSIBLE IF A CUSTOMER BECOMES DEPENDED OR ADDICTED TO GAMBLING. LiveBetTips PROVIDES ADVISE AND SUGGESTIONS FOR THE BETTING AND IS NOT RESPONSIBLE FOR ANY FINANCIAL OR ANY OTHER LOSSES INCURRED OUR ADVISE OR SUGGESTIONS IN ANY FORM.Applicable LawYou agree that this Terms of Use and any dispute arising out of your use of the LiveBetTips app or our products or services shall be governed by and construed in accordance with local laws where the headquarters of the owner of the LiveBetTips app is located, without regard to its conflict of law provisions. By registering or using the LiveBetTips app and service you consent and submit to the exclusive jurisdiction and venue of the county or city where the headquarters of the owner of the LiveBetTips app is located.PaymentIn order to access betting predictions you should have credits. Credits are available for purchase through Apple's in app purchases. There are two products to buy through in app purchases. The product of one (1) credit and the product of five (5) credits. Every prediction costs one credit. The way of payment may be altered by LiveBetTips which will be announced to the customers before the purchase of the credits.DisclaimerLiveBetTips does not guarantee winnings and cannot be held liable for losses resulting from the use of predictions (suggestions) obtained from its app.Betting can be very risky and users should only speculate with money that they can comfortably afford to lose and should ensure that the risks involved are fully understood, seeking advice if necessary.LiveBetTips is not  responsible for the losses resulting from the use of predictions (suggestions) obtained from its app and will NOT refund such losses.</mutableString>
+                                <string key="text">It is your responsibility to ensure mobile device meets all the necessary technical specifications to enable you to access and use the LiveBetTips app. Apple Applications are only licensed for use on a device owned or controlled by you and using the Apple iPhone OS so you must make sure that you use an appropriate device to access and use any Apple Application.
+
+Terms
+
+By accessing LiveBetTips, you are agreeing to be bound by these Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this app. The materials contained in LiveBetTips app are protected by applicable copyright and trade mark law.
+
+REGISTRATION
+
+Customer must be 18 or over years of age to register and engage services with LiveBetTips. During the registration process you will be asked to agree that you are 18 or over years old. If you notice any unauthorised use of your account or any security violation you should notify LiveBetTips. LiveBetTips is not responsible for any damage or loss resulting from non-compliance with this clause. Any false disclosure or misrepresentation by the customer does not rise any claim against LiveBetTips app.
+
+Customer security
+
+During your registration with LiveBetTips, you select a username (your email address) and a password to activate the service and your account. You are exclusively responsible to keep your password and username confidential and you bear full responsibility for any activity carried out under your username and password. It is your responsibility to immediately contact LiveBetTips in case of any unauthorised use of your personal access data.
+
+Our Service
+
+LiveBetTips provides live advice and predictions (suggestions) for betting or gambling.
+
+LIMITATION OF LIABILITY
+
+YOU EXPRESSLY UNDERSTAND AND AGREE THAT WE SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSS (EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM OR ARISING OUT OF (I) THE USE OF OR THE INABILITY TO USE THE SERVICE, (II) THE COST TO OBTAIN SUBSTITUTE GOODS AND/OR SERVICES RESULTING FROM ANY TRANSACTION ENTERED INTO ON THROUGH THE SERVICE, (III) UNAUTHORISED ACCESS TO OR ALTERATION OF YOUR DATA TRANSMISSIONS, OR (IV) ANY OTHER MATTER RELATING TO THE SERVICE (V) OR THE USE OF THE APP BY ANY PERSON WITH LIMITED LEGAL CAPACITY. LiveBetTips IS NOT RESPONSIBLE IF A CUSTOMER BECOMES DEPENDED OR ADDICTED TO GAMBLING. LiveBetTips PROVIDES ADVISE AND SUGGESTIONS FOR THE BETTING AND IS NOT RESPONSIBLE FOR ANY FINANCIAL OR ANY OTHER LOSSES INCURRED OUR ADVISE OR SUGGESTIONS IN ANY FORM.
+
+Applicable Law
+
+You agree that this Terms of Use and any dispute arising out of your use of the LiveBetTips app or our products or services shall be governed by and construed in accordance with local laws where the headquarters of the owner of the LiveBetTips app is located, without regard to its conflict of law provisions. By registering or using the LiveBetTips app and service you consent and submit to the exclusive jurisdiction and venue of the county or city where the headquarters of the owner of the LiveBetTips app is located.
+Payment
+In order to access betting predictions you should have credits. Credits are available for purchase through Apple's in app purchases. There are two products to buy through in app purchases. The product of one (1) credit and the product of five (5) credits. Every prediction costs one credit. The way of payment may be altered by LiveBetTips which will be announced to the customers before the purchase of the credits.
+
+Disclaimer
+
+LiveBetTips does not guarantee winnings and cannot be held liable for losses resulting from the use of predictions (suggestions) obtained from its app.
+
+Betting can be very risky and users should only speculate with money that they can comfortably afford to lose and should ensure that the risks involved are fully understood, seeking advice if necessary.
+
+LiveBetTips is not  responsible for the losses resulting from the use of predictions (suggestions) obtained from its app and will NOT refund such losses.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -911,7 +954,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Detail Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jcZ-F2-v7X">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Detail Message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jcZ-F2-v7X">
                                 <rect key="frame" x="20" y="170" width="280" height="325"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6729763419" green="0.70762158360000005" blue="0.040031714580000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1037,7 +1080,36 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Live Betting is a category of betting, which yields big profits as well as the opportunity to ‘cover’ your bet.The occupation with this category of betting demands devoting a lot of time for the study of the games before they begin and also for their observation.Strategy, discipline, time and knowledge of betting and statistics are required for the study of games.Our team watches the games we have chosen live and in combination with the use of statistics makes predictions and proposes to you the final result of the game.We take advantage of the yield’s great variations during a football match to our profit.All of our customers will receive our predictions in their mobiles live.The only thing you have to do is place your bet.What is also important is the following strategy that we follow and suggest:-Betting always the same amount of money (Flat Bet). We choose this way of betting because it is certain that there will be a series of successful as well as ineffective results. We want to protect our capital and increase our profits, too.-We always play odd matches for the same reason as mentioned above.-When our bet is confirmed, we cover it almost always because this way we earn some 4-7 % more.-All the bets we choose are played between the 45th and 70th minute of the match which is its culmination.------What is a prediction?This is our philosophy on what constitutes ‘predictionFor us, betting in football matches is a matter of statistics. We use our long experience mainly guided by statistics.  ------What is the cover of betting?During a match we choose an outcome according to our predictions. If our predictions are not confirmed in any point of the game, then the betting is lost. On the contrary, if our prediction is confirmed before the end of the match, we have the chance not to lose the invested capital. The way to achieve this is to bet at the other two outcomes of the match with such a sum of money so as not to lose if, at the end of the match, our first prediction is not confirmed. EXAMPLE:Cover on a home win. Let’s say that we are playing a home win that starts the match with odds of 1,80 , and bet 100 units .At the 60 minute,( were we usually give our predictions),we have a draw .The price at this point of the game ( without any red card ) is about 2,50 – 2,70.If a goal is scored for the home team at that time or later , the price is going down to 1,10 – 1,30 . This is the time we cover our bet, by laying home win (if we play at bet exchanges), or bet on draw and away win if (we play on conventional bookmakers).In both of the above situations we cover our bets to protect our investment of 100 units. But why do we do this? The answer to this question is based on statistics. Analysis of 2500+ matches has shown that at the last 10 minutes +2 or 3 minutes of stoppage time, (after the 80 minute of the match), about 30% of the matches go from home win to draw or away win. Without covering our bets we would have a profit of 820 units every 10 matches [2, 60 x 70% = 1820 – 1000(10x100) = 820).With coverage [2, 40(2, 60-0, 20) x70% = 1680 – 1000 = 680 +300 (the 3 bets we DID NOT LOSE) = 980. THAT IS A DIFFERENCE OF 16% MORE PROFIT, JUST BY COVERING OUR MATCHES. If the goal is scored at the very last minutes of a match, we can cover our bets with the same amount, and make a profit, whatever the outcome of the match. That makes our profit even higher.We can do similar covers on our bets, on OVER, UNDER, HOME WIN OR DRAW, AWAY WIN OR DRAW, AWAY WIN, DRAW etc. This is the advantage of Live Bet: you have the time to avoid matches that don’t go the way you want, avoid betting on matches with in play injuries, red cards etc, and when you do bet on matches have the luxury of covering your investment (not losing your capital), and if in the last minutes of the match, make a profit on any outcome of the match.</mutableString>
+                                <string key="text">Live Betting is a category of betting, which yields big profits as well as the opportunity to ‘cover’ your bet.
+The occupation with this category of betting demands devoting a lot of time for the study of the games before they begin and also for their observation.
+Strategy, discipline, time and knowledge of betting and statistics are required for the study of games.
+Our team watches the games we have chosen live and in combination with the use of statistics makes predictions and proposes to you the final result of the game.
+We take advantage of the yield’s great variations during a football match to our profit.
+All of our customers will receive our predictions in their mobiles live.
+The only thing you have to do is place your bet.
+
+What is also important is the following strategy that we follow and suggest:
+-Betting always the same amount of money (Flat Bet). We choose this way of betting because it is certain that there will be a series of successful as well as ineffective results. We want to protect our capital and increase our profits, too.
+-We always play odd matches for the same reason as mentioned above.
+-When our bet is confirmed, we cover it almost always because this way we earn some 4-7 % more.
+-All the bets we choose are played between the 45th and 70th minute of the match which is its culmination.
+
+------What is a prediction?
+
+This is our philosophy on what constitutes ‘prediction
+For us, betting in football matches is a matter of statistics. We use our long experience mainly guided by statistics.  
+
+------What is the cover of betting?
+
+During a match we choose an outcome according to our predictions. If our predictions are not confirmed in any point of the game, then the betting is lost. On the contrary, if our prediction is confirmed before the end of the match, we have the chance not to lose the invested capital. The way to achieve this is to bet at the other two outcomes of the match with such a sum of money so as not to lose if, at the end of the match, our first prediction is not confirmed. 
+
+EXAMPLE:
+
+Cover on a home win. 
+
+Let’s say that we are playing a home win that starts the match with odds of 1,80 , and bet 100 units .At the 60 minute,( were we usually give our predictions),we have a draw .The price at this point of the game ( without any red card ) is about 2,50 – 2,70.If a goal is scored for the home team at that time or later , the price is going down to 1,10 – 1,30 . This is the time we cover our bet, by laying home win (if we play at bet exchanges), or bet on draw and away win if (we play on conventional bookmakers).In both of the above situations we cover our bets to protect our investment of 100 units. But why do we do this? The answer to this question is based on statistics. Analysis of 2500+ matches has shown that at the last 10 minutes +2 or 3 minutes of stoppage time, (after the 80 minute of the match), about 30% of the matches go from home win to draw or away win. Without covering our bets we would have a profit of 820 units every 10 matches [2, 60 x 70% = 1820 – 1000(10x100) = 820).With coverage [2, 40(2, 60-0, 20) x70% = 1680 – 1000 = 680 +300 (the 3 bets we DID NOT LOSE) = 980. THAT IS A DIFFERENCE OF 16% MORE PROFIT, JUST BY COVERING OUR MATCHES. If the goal is scored at the very last minutes of a match, we can cover our bets with the same amount, and make a profit, whatever the outcome of the match. That makes our profit even higher.
+We can do similar covers on our bets, on OVER, UNDER, HOME WIN OR DRAW, AWAY WIN OR DRAW, AWAY WIN, DRAW etc. This is the advantage of Live Bet: you have the time to avoid matches that don’t go the way you want, avoid betting on matches with in play injuries, red cards etc, and when you do bet on matches have the luxury of covering your investment (not losing your capital), and if in the last minutes of the match, make a profit on any outcome of the match.
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1206,8 +1278,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="KVJ-Yz-AEq"/>
-        <segue reference="m1E-mQ-qbD"/>
-        <segue reference="9JU-u1-9gB"/>
-        <segue reference="8Sm-z6-vay"/>
+        <segue reference="Rzl-JM-lF5"/>
+        <segue reference="ugI-Be-zbo"/>
+        <segue reference="Snc-nj-Ubj"/>
     </inferredMetricsTieBreakers>
 </document>

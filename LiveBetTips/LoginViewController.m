@@ -62,6 +62,12 @@
     [_bt_signUp setTitle:NSLocalizedString(@"sign_up", nil) forState:UIControlStateNormal];
     [_bt_forgotPassword setTitle:NSLocalizedString(@"forgot_my_password", nil) forState:UIControlStateNormal];
     
+    
+    //[self.navigationController.navigationBar setBarTintColor:[UIColor darkGrayColor]];
+    
+    //[[UINavigationBar appearance] setBackgroundColor:[UIColor darkGrayColor]];
+    //[[UINavigationBar appearance] setTintColor:[UIColor darkGrayColor]];
+    
     [self configureRestKit];
 }
 

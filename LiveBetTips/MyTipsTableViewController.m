@@ -34,7 +34,13 @@ int rowNumber;
 {
     [super viewDidLoad];
     
-    _creditsLabel.text = [[NSString alloc] initWithFormat:@"Credits : %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"usercredit"]];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"usercredit"] == NULL) {
+        _creditsLabel.text = [[NSString alloc] initWithFormat:@"Credits : %@", @"0"];
+    } else {
+        _creditsLabel.text = [[NSString alloc] initWithFormat:@"Credits : %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"usercredit"]];
+    }
+    
+    
     
     [self loadTips];
 
@@ -68,6 +74,9 @@ int rowNumber;
     cell.homeTeamLabel.text = tip.homeTeam;
     cell.awayTeamLabel.text = tip.awayTeam;
     cell.isVerifiedLabel.text = tip.isPredictionVerified;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"((?:2|1)\\d{3}(?:-|\\/)(?:(?:0[1-9])|(?:1[0-2]))(?:-|\\/)(?:(?:0[1-9])|(?:[1-2][0-9])|(?:3[0-1]))(?:T|\\s)(?:(?:[0-1][0-9])|(?:2[0-3])):(?:[0-5][0-9]):(?:[0-5][0-9]))" options:0 error:NULL];
+    NSTextCheckingResult *match = [regex firstMatchInString:tip.DateTimeCreated options:0 range:NSMakeRange(0, [tip.DateTimeCreated length])];
+    cell.dateLabel.text = [tip.DateTimeCreated substringWithRange:[match rangeAtIndex:1]];
     // Configure the cell...
     
     return cell;
@@ -97,6 +106,8 @@ int rowNumber;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     rowNumber = indexPath.row;
     [self performSegueWithIdentifier:@"predictionDetailSegue" sender:nil];
 }
