@@ -55,6 +55,10 @@ BOOL termsAccepted = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    UIColor *oil = [[UIColor alloc] initWithRed:112.0/255.0 green:109.0/255.0 blue:42.0/255.0 alpha:1];
+    [self.navigationController.navigationBar setBarTintColor:oil];
+    [[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [_checkBtn setTitle:@"◻️" forState:UIControlStateNormal];
     
     [self configureRestKit];

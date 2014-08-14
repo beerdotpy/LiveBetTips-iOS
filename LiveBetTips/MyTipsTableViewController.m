@@ -36,7 +36,8 @@ int rowNumber;
     
     UIColor *oil = [[UIColor alloc] initWithRed:112.0/255.0 green:109.0/255.0 blue:42.0/255.0 alpha:1];
     [self.navigationController.navigationBar setBarTintColor:oil];
-    
+    [[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"usercredit"] == NULL) {
         _creditsLabel.text = [[NSString alloc] initWithFormat:@"Credits : %@", @"0"];
     } else {
@@ -161,7 +162,7 @@ int rowNumber;
     [[RKObjectManager sharedManager] getObjectsAtPath:mytipsPath parameters:params
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   
-                                                  _tips = mappingResult.array;
+                                                  _tips = [[mappingResult.array reverseObjectEnumerator] allObjects];
                                                   [self.tableView reloadData];
                                                   [HUD hide:YES];
                                                   
@@ -204,23 +205,23 @@ int rowNumber;
     NSString *authToken = [defaults objectForKey:KEY_USER_AUTH_TOKEN];
     NSString *email = [defaults objectForKey:KEY_USER_NAME];
     NSLog(@"%@", email);
-    NSString *basicAuthString = [NSString stringWithFormat:@"Basic %@",authToken];
+    //NSString *basicAuthString = [NSString stringWithFormat:@"Basic %@",authToken];
     
-    NSDictionary *params = @{@"isPushed":@"True"};
+    //NSDictionary *params = @{@"isPushed":@"True"};
     
     
     //Setting Content-Type: application/json Header, else the api throws 404 NOT Found Error
-    [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_AUTHORIZATON value:basicAuthString];
+    //[[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_AUTHORIZATON value:basicAuthString];
     [[[RKObjectManager sharedManager] HTTPClient] setDefaultHeader:HEADER_CONTENT_TYPE value:RKMIMETypeJSON];
     //[[[RKObjectManager sharedManager] HTTPClient] setAuthorizationHeaderWithUsername:email password:pass];
     
     NSLog(@"Headers %@", [[[RKObjectManager sharedManager] HTTPClient] defaultHeaders]);
     //RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
     
-    [[RKObjectManager sharedManager] getObjectsAtPath:urlString parameters:params
+    [[RKObjectManager sharedManager] getObjectsAtPath:urlString parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   
-                                                  _tips = mappingResult.array;
+                                                  _tips = [[mappingResult.array reverseObjectEnumerator] allObjects];
                                                   [self.tableView reloadData];
                                                   [HUD hide:YES];
                                                   

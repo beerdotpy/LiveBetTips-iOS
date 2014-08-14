@@ -1253,7 +1253,7 @@ We can do similar covers on our bets, on OVER, UNDER, HOME WIN OR DRAW, AWAY WIN
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UTu-Pf-1T0"/>
+                    <navigationItem key="navigationItem" title="Register" id="UTu-Pf-1T0"/>
                     <connections>
                         <outlet property="checkBtn" destination="18x-Yx-i0G" id="Y2I-PT-OMQ"/>
                         <outlet property="confirmPasswordTextField" destination="q5J-Pa-dTM" id="uTm-zl-oTQ"/>
@@ -1277,9 +1277,9 @@ We can do similar covers on our bets, on OVER, UNDER, HOME WIN OR DRAW, AWAY WIN
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="KVJ-Yz-AEq"/>
         <segue reference="Rzl-JM-lF5"/>
+        <segue reference="KVJ-Yz-AEq"/>
+        <segue reference="m1E-mQ-qbD"/>
         <segue reference="ugI-Be-zbo"/>
-        <segue reference="Snc-nj-Ubj"/>
     </inferredMetricsTieBreakers>
 </document>

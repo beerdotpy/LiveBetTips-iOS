@@ -64,7 +64,8 @@
     
     UIColor *oil = [[UIColor alloc] initWithRed:112.0/255.0 green:109.0/255.0 blue:42.0/255.0 alpha:1];
     [self.navigationController.navigationBar setBarTintColor:oil];
-    
+    [[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+
     //[[UINavigationBar appearance] setBackgroundColor:[UIColor darkGrayColor]];
     //[[UINavigationBar appearance] setTintColor:[UIColor darkGrayColor]];
     

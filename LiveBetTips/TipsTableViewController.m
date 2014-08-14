@@ -32,7 +32,8 @@ int rowNumber;
     
     UIColor *oil = [[UIColor alloc] initWithRed:112.0/255.0 green:109.0/255.0 blue:42.0/255.0 alpha:1];
     [self.navigationController.navigationBar setBarTintColor:oil];
-    
+    [[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"usercredit"] == NULL) {
         _creditsLabel.text = [[NSString alloc] initWithFormat:@"Credits : %@", @"0"];
     } else {
@@ -223,7 +224,7 @@ int rowNumber;
     [[RKObjectManager sharedManager] getObjectsAtPath:@"api/predictions/" parameters:params
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   
-                                                  _tips = mappingResult.array;
+                                                  _tips = [[mappingResult.array reverseObjectEnumerator] allObjects];
                                                   [self.tableView reloadData];
                                                   [HUD hide:YES];
                                                   
@@ -319,7 +320,7 @@ int rowNumber;
     [[RKObjectManager sharedManager] getObjectsAtPath:urlString parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   
-                                                  _tips = mappingResult.array;
+                                                  _tips = [[mappingResult.array reverseObjectEnumerator] allObjects];
                                                   [self.tableView reloadData];
                                                   [HUD hide:YES];
                                                   
