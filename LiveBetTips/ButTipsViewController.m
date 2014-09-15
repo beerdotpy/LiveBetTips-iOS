@@ -58,8 +58,8 @@
 -(IBAction)buyCredit25:(id)sender
 {
     
-    credit = 25;
-    NSSet *productIdentifiers = [NSSet setWithObject:@"Livebettips5credits"];
+    credit = 5;
+    NSSet *productIdentifiers = [NSSet setWithObject:@"fiveCredits"];
     productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
     productsRequest.delegate = self;
     [productsRequest start];
@@ -68,8 +68,8 @@
 -(IBAction)buyCredit50:(id)sender
 {
     
-    credit = 50;
-    NSSet *productIdentifiers = [NSSet setWithObject:@"Livebettips1credits"];
+    credit = 1;
+    NSSet *productIdentifiers = [NSSet setWithObject:@"oneCredit"];
     productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
     productsRequest.delegate = self;
     [productsRequest start];
@@ -104,12 +104,12 @@
 {
     SKPayment *payment;
     if (credit==25) {
-		payment=[SKPayment paymentWithProductIdentifier:@"Livebettips5credits"];
+		payment=[SKPayment paymentWithProductIdentifier:@"fiveCredits"];
         
 	}
     
     if (credit==50) {
-		payment=[SKPayment paymentWithProductIdentifier:@"Livebettips1credits"];
+		payment=[SKPayment paymentWithProductIdentifier:@"oneCredit"];
         
 	}
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
@@ -132,12 +132,12 @@
     {
         [[NSNotificationCenter defaultCenter] postNotificationName:kInAppPurchaseManagerTransactionSucceededNotification object:self userInfo:userInfo];
         
-        if ([transaction.payment.productIdentifier  isEqual: @"Livebettips5credits"]) {
+        if ([transaction.payment.productIdentifier  isEqual: @"fiveCredits"]) {
             NSNumber* purchaseType = [[NSNumber alloc] initWithInt:5];
             NSNumber* cid = [[NSNumber alloc] initWithInt:2];
             [self postTransactionToServerWithCredit:purchaseType andCreditId:cid];
 
-        } else if ([transaction.payment.productIdentifier  isEqual: @"Livebettips1credits"]) {
+        } else if ([transaction.payment.productIdentifier  isEqual: @"oneCredit"]) {
             
             NSNumber* purchaseType = [[NSNumber alloc] initWithInt:1];
             NSNumber* cid = [[NSNumber alloc] initWithInt:1];
